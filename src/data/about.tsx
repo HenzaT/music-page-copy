@@ -10,22 +10,22 @@ export const about: About[] = [
     as well as atypical features such as odd time signatures. `
   },
   {
-    artist: 'firstSwim',
+    artist: 'First Swim',
     text: `My solo project which merges electronic music with organic elements like guitar and bass,
     as well as atypical features such as odd time signatures. `
   },
   {
-    artist: 'pauloPostFuture',
+    artist: 'Paulo Post Future',
     text: `My solo project which merges electronic music with organic elements like guitar and bass,
     as well as atypical features such as odd time signatures. `
   },
   {
-    artist: 'littleMoon',
+    artist: 'Little Moon',
     text: `My solo project which merges electronic music with organic elements like guitar and bass,
     as well as atypical features such as odd time signatures. `
   },
   {
-    artist: 'shamisen',
+    artist: 'Shamisen',
     text: `My solo project which merges electronic music with organic elements like guitar and bass,
     as well as atypical features such as odd time signatures. `
   }

@@ -1,11 +1,46 @@
 .header {
   position: fixed;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   border-radius: var(--b-radius);
   width: 90%;
   height: 6vh;
   left: 50%;
   top: 3%;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overlay {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  gap: 20px;
+  border: 1px solid black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.nav-icon {
+  width: 30px;
+}
+
+.nav-icon-button, .nav-button {
+  border: none;
+  background-color: transparent;
+}
+
+.nav-icon-button {
+  margin-left: 30px;
+  font-size: 3rem;
+}
+
+.nav-button {
+  margin: 0 30px 8px 0;
+  font-size: 3rem;
 }

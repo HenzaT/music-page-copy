@@ -10,6 +10,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: "Doto", sans-serif;
   font-optical-sizing: auto;
@@ -38,7 +42,7 @@ a {
   --shadow: 10px 7px 15px var(--black);
   /* border */
   --border: 1px solid var(--black);
-  --b-radius: 20px;
+  --b-radius: 30px;
 }
 
 /* often used css */

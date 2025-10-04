@@ -7,9 +7,17 @@ import AptistSection from './components/AptistSection/AptistSection'
 // header with aptist First Swim Shamisen (ex PPF Little Moon) About
 // Opens one of the above when clicked on
 function App() {
+  const [ isRotated, setIsRotated ] = useState(true)
+
+  function showOverlay() {
+
+  }
+
   return (
     <>
-      <Header />
+      <Header
+        showOverlay={showOverlay}
+      />
       <div className="main">
         <AptistSection />
       </div>

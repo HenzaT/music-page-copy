@@ -1,4 +1,5 @@
 import Releases from '../Releases/Releases'
+import Links from '../Links/Links'
 import { aptistReleases } from '../../data/discography'
 import { about } from '../../data/about'
 
@@ -15,7 +16,9 @@ function AptistSection() {
           <p>{el.text}</p>
         </div>
       ))}
+      <h2>Releases</h2>
       <Releases />
+      <Links />
     </div>
   )
 }
