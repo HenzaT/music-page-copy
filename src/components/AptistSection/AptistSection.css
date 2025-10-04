@@ -1,0 +1,9 @@
+.aptist-section {
+  background: var(--yellow);
+}
+
+.main-header {
+  font-size: 6rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
