@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 interface HeaderProps {
-  showOverlay: React.MouseEventHandler<HTMLButtonElement>
+  showOverlay: React.MouseEventHandler<HTMLButtonElement>,
 }
 
 const navLinkStyles = ({ isActive }: { isActive: boolean }) => ({
@@ -14,9 +14,11 @@ const navLinkStyles = ({ isActive }: { isActive: boolean }) => ({
 function Header(props: HeaderProps) {
   return (
     <div className="header">
-      <button className="nav-icon-button" type="button">
-        <img src="./src/assets/images/synth.png" alt="png image of synth" className="nav-icon" />
-      </button>
+      <NavLink to="/aptist">
+        <button className="nav-icon-button" type="button">
+          <img src="./src/assets/images/synth.png" alt="png image of synth" className="nav-icon" />
+        </button>
+      </NavLink>
       <button type="button" onClick={props.showOverlay} className="nav-button">+</button>
       {/* <div className="overlay flex-col">
         <NavLink to="/aptist" style={navLinkStyles}>aptist</NavLink>
