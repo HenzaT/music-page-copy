@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface HeaderProps {
   showOverlay: React.MouseEventHandler<HTMLButtonElement>
 }
@@ -9,14 +11,14 @@ function Header(props: HeaderProps) {
         <img src="./src/assets/images/synth.png" alt="png image of synth" className="nav-icon" />
       </button>
       <button type="button" onClick={props.showOverlay} className="nav-button">+</button>
-      {/* <div className="overlay flex-col">
-        <a href="aptist">aptist</a>
-        <a href="first-swim">First Swim</a>
-        <a href="shamisen">Shamisen</a>
-        <a href="about">About</a>
-        <a href="paulo-post-future">Paulo Post Future</a>
-        <a href="little-moon">Little Moon</a>
-      </div> */}
+      <div className="overlay flex-col">
+        <Link to="/aptist">aptist</Link>
+        <Link to="/first-swim">First Swim</Link>
+        <Link to="/shamisen">Shamisen</Link>
+        <Link to="/about">About</Link>
+        <Link to="/paulo-post-future">Paulo Post Future</Link>
+        <Link to="/little-moon">Little Moon</Link>
+      </div>
     </div>
   )
 }

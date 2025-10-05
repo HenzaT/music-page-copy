@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import './styling/App.css'
 // import About from './components/About/About'
 import Header from './components/Header/Header'
@@ -14,7 +15,7 @@ function App() {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <Header
         showOverlay={showOverlay}
       />
@@ -22,7 +23,7 @@ function App() {
         <AptistSection />
       </div>
       {/* <About /> */}
-    </>
+    </BrowserRouter>
   )
 }
 
