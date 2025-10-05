@@ -1,9 +1,14 @@
-import { aptistReleases } from '../../data/discography'
+import type { Release } from '../../data/discography'
 
-function Releases() {
+interface ReleasesProps {
+  data: Release[]
+}
+
+function Releases(props: ReleasesProps) {
   return (
     <div className="releases-cards">
-      {aptistReleases.map((release, idx) => (
+      <h1>Releases</h1>
+      {props.data.map((release: Release, idx: number) => (
         release.released &&
         <div className="card flex-col" key={idx}>
           <img src={release.img} alt={release.alt} className="artwork" />

@@ -1,6 +1,4 @@
-.aptist-section {
-  background: var(--yellow);
-}
+/* shared css for all sections */
 
 .main-header {
   font-size: 6rem;

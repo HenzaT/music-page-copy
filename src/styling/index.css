@@ -1,6 +1,13 @@
-@import url('../components/AptistSection/AptistSection.css');
 @import url('../components/Header/Header.css');
 @import url('../components/Releases/Releases.css');
+@import url('../components/Sections/section.css');
+@import url('../components/About/About.css');
+
+@import url('../components/Sections/AptistSection/AptistSection.css');
+@import url('../components/Sections/FirstSwimSection/FirstSwimSection.css');
+@import url('../components/Sections/ShamisenSection/ShamisenSection.css');
+@import url('../components/Sections/PPFSection/PpfSection.css');
+@import url('../components/Sections/LittleMoonSection/LittleMoonSection.css');
 
 * {
   margin: 0;
@@ -12,15 +19,11 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-h1 {
-  font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-  "ROND" 0;
+::-webkit-scrollbar {
+    display: none;
 }
 
 a {
@@ -29,15 +32,24 @@ a {
 
 /* variables */
 :root {
-  /* colors */
   --black: #221E22;
   --white: #f5eff5;
+  /* aptist */
   --yellow: #ECA72C;
   --dark-yellow: #ba7d13;
-  --orange: #EE5622;
-  --dark-orange: #863216;
+  /* first swim */
+  --blue: #3b8dae;
+  --dark-blue: #225467;
+  /* paulo post future */
+  --orange: #b53308;
+  --dark-orange: #7d2305;
+  /* little moon */
   --purple: #44355B;
   --dark-purple: #31263E;
+  /* shamisen */
+  --taupe: #dfbfbf;
+  --dark-taupe: #8e7575;
+
   /* shadow */
   --shadow: 10px 7px 15px var(--black);
   /* border */
