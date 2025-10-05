@@ -1,4 +1,6 @@
-interface LinkTypes {
+// data all links
+
+export interface LinkData {
   artist: string,
   spotify: string | null,
   apple: string | null,
@@ -7,7 +9,7 @@ interface LinkTypes {
   bandcamp: string | null
 }
 
-export const links: LinkTypes[] = [
+export const links: LinkData[] =  [
   {
     artist: 'aptist',
     spotify: 'https://open.spotify.com/artist/3iUZV8FaZhxoteUhmkvTy3?si=OjnmS-UeQ1mhDQAUamN4QA',

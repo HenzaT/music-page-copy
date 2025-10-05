@@ -1,14 +1,14 @@
-import type { Release } from '../../data/discography'
+import type { ReleaseData } from '../../data/discographyData'
 
 interface ReleasesProps {
-  data: Release[]
+  data: ReleaseData[]
 }
 
 function Releases(props: ReleasesProps) {
   return (
     <div className="releases-cards">
       <h1>Releases</h1>
-      {props.data.map((release: Release, idx: number) => (
+      {props.data.map((release: ReleaseData, idx: number) => (
         release.released &&
         <div className="card flex-col" key={idx}>
           <img src={release.img} alt={release.alt} className="artwork" />

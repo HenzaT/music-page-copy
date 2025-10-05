@@ -9,4 +9,10 @@
   font-style: normal;
   font-variation-settings:
   "ROND" 0; */
+  margin-top: auto;
+}
+
+.new-release-text {
+  text-align: center;
+  margin-top: auto;
 }

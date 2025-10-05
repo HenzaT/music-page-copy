@@ -1,11 +1,25 @@
-import { links } from '../../data/links'
+import type { LinkData } from '../../data/linksData'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpotify, faItunes, faBandcamp } from '@fortawesome/free-brands-svg-icons'
 
-function Links() {
+interface LinkProps {
+  data: LinkData[]
+  index: number;
+}
+
+function Links(props: LinkProps) {
+  const { data, index } = props
   return (
     <div className="artist-links">
-      {links.map((link, idx) => (
-        <a href={link.spotify} target="_blank" key={idx}>spotify</a>
-      ))}
+      <a href={data[index].spotify} target="_blank">
+        <FontAwesomeIcon icon={faSpotify}/>
+      </a>
+      <a href={data[index].apple} target="_blank">
+        <FontAwesomeIcon icon={faItunes}/>
+      </a>
+      <a href={data[index].bandcamp} target="_blank">
+        <FontAwesomeIcon icon={faBandcamp}/>
+      </a>
     </div>
   )
 }

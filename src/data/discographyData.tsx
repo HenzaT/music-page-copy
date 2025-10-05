@@ -1,6 +1,6 @@
 // data all releases
 
-export interface Release {
+export interface ReleaseData {
   title: string,
   img: string,
   alt: string,
@@ -10,7 +10,7 @@ export interface Release {
 }
 
 // array of objects [ {}, {}, {} ]
-export const aptistReleases: Release[] = [
+export const aptistReleases: ReleaseData[] = [
   {
     title: 'Dream State',
     img: './src/assets/aptist/Into-Skies.jpg',
@@ -96,9 +96,9 @@ export const aptistReleases: Release[] = [
   }
 ]
 
-export const firstSwimReleases: Release[] = []
+export const firstSwimReleases: ReleaseData[] = []
 
-export const ppfReleases: Release[] = [
+export const ppfReleases: ReleaseData[] = [
   {
     title: 'Four',
     img: './src/assets/paulo-post-future/four.jpg',
@@ -141,7 +141,7 @@ export const ppfReleases: Release[] = [
   },
 ]
 
-export const littleMoonReleases: Release[] = [
+export const littleMoonReleases: ReleaseData[] = [
   {
     title: 'Circadian Rhythm',
     img: './src/assets/little-moon/circadian-rhythm.jpg',

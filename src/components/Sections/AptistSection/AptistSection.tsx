@@ -1,25 +1,26 @@
-import Releases from '../../Releases/Releases'
-import Links from '../../Links/Links'
-import { aptistReleases } from '../../../data/discography'
-import { about } from '../../../data/about'
+import About from '../../About/About';
+import Releases from '../../Releases/Releases';
+import Links from '../../Links/Links';
+import { about } from '../../../data/aboutData';
+import { aptistReleases } from '../../../data/discographyData';
+import { links } from '../../../data/linksData';
 
 function AptistSection() {
   return (
     <div className="aptist-section">
       <div className="banner">
+        <h1 className="new-release-text">{aptistReleases[3].title} <br />available on all <br />streaming platforms <br />now!</h1>
         <h1 className="main-header aptist-h1">aptist</h1>
       </div>
-      <div className="info">
-        <h1>{aptistReleases[3].title} available on all streaming platforms now!</h1>
-        {about.map((el, idx) => (
-          el.artist === 'aptist' &&
-          <div className="about" key={idx}>
-            <p>{el.text}</p>
-          </div>
-        ))}
-      </div>
-      <Releases data={ aptistReleases }/>
-      <Links />
+      <About
+        data={about}
+        index={0}
+      />
+      <Releases data={aptistReleases} />
+      <Links
+        data={links}
+        index={0}
+      />
     </div>
   )
 }
