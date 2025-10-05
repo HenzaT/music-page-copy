@@ -2,7 +2,7 @@
 This is a self-directed project to showcase my music.
 
 ## Goals
-To make a site to showcase the music I am currently making, as well as from past projects. This is an extention of my software development portfolio, and I intend to link the two in future. I also wanted to keep my skills using React up to date. 
+To make a site to showcase the music I am currently making, as well as from past projects. This is an extention of my software development portfolio, and I intend to link the two in future. I also wanted to keep my skills using React up to date and use a different hosting platform to Heroku, which is what I usually use. 
 
 ## Tech Stack
 - React.js
