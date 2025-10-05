@@ -15,12 +15,12 @@ To make a site to showcase the music I am currently making, as well as from past
 ## Process
 I first set up my React project using Vite: 
 ```
-`npm create vite@latest`
-Selected framework: `React`
-Selected variant: `TypeScript`
-`cd react-weather-app`
-`npm install`
-`npm run dev`
+npm create vite@latest
+Selected framework: React
+Selected variant: TypeScript
+cd music-page
+npm install
+npm run dev
 ```
 For the website, I decided quickly that I would need a few things:
 - no backend (as no data needs to be saved, and no need for user input)
