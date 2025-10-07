@@ -5,6 +5,38 @@
   justify-content: flex-end;
 }
 
+/* react-h5-audio-player styles */
+.rhap_container {
+  width: 60%;
+  background: var(--yellow);
+  border: none;
+  box-shadow: none;
+  padding: 0 15px 10px 15px;
+}
+
+.rhap_controls-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.rhap_repeat-button, .rhap_volume-bar-area, .rhap_volume-controls {
+  display: none;
+}
+
+.rhap_main-controls-button {
+  color: var(--black);
+  margin: 0;
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+}
+.rhap_progress-indicator {
+  background: var(--black);
+}
+.rhap_progress-filled {
+  background-color: var(--dark-yellow);
+}
+
 .fade-enter {
   opacity: 0;
   transform: translate(0, 25px);

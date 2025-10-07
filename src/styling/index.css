@@ -35,13 +35,17 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 /* variables */
 :root {
   --black: #221E22;
   --white: #f5eff5;
   /* aptist */
   --yellow: #ECA72C;
-  --dark-yellow: #ba7d13;
+  --dark-yellow: #895802;
   /* first swim */
   --blue: #3b8dae;
   --dark-blue: #225467;

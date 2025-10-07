@@ -15,7 +15,7 @@ function Releases(props: ReleasesProps) {
     <span className={isFlipped ? "cd-album-circle flipped" : "cd-album-circle"} onClick={showTracklist}>
       <div className="tracklist">
         <div className="tracklist-inner">
-          {data.map((release: ReleaseData, idx: number) => (
+          {data.map((release: ReleaseData) => (
             release.tracklist.length > 1 &&
             release.tracklist.map((song, idx) => (
               <p key={idx}>{song}</p>
@@ -28,7 +28,7 @@ function Releases(props: ReleasesProps) {
   return (
     <div className="releases-cards">
       <h1>Releases</h1>
-      <p>Select any discs that are gold to see full tracklist</p>
+      <p>Select any gold disc to see the full tracklist</p>
       {data.map((release: ReleaseData, idx: number) => (
         release.released &&
         <div className="card flex-col" key={idx}>

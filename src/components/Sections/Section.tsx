@@ -5,6 +5,8 @@ import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
 import { aptistReleases } from '../../data/discographyData';
 import type { ReleaseData } from '../../data/discographyData';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css'
 
 interface SectionProps {
   artistName: string
@@ -28,7 +30,29 @@ export default function Section(props: SectionProps) {
   } = props;
 
   const newestAptistRelease = aptistReleases.find(({ released }) => released);
-  const newestAptistReleaseName = <h1 className="new-release-text">{newestAptistRelease.title} <br />available on all <br />streaming platforms <br />now!</h1>
+  const newestAptistImage = (description: string) => (
+    <img
+      src={newestAptistRelease?.img}
+      alt={`${newestAptistRelease?.title ?? ""} album artwork`}
+      className={`new-release-img-${description}`}
+    />
+  );
+
+  const newestAptistReleaseName =
+    <h1 className="new-release-text flex-col">
+      <div className="new-release-img-container">
+        {newestAptistImage('front')}
+        {newestAptistImage('middle')}
+        {newestAptistImage('main')}
+        {newestAptistImage('back')}
+      </div>
+      {newestAptistRelease?.title}. <br />Stream it now.
+      <AudioPlayer
+      src='./src/assets/audio/3. clairo 606.mp3'
+      volume={0.5}
+      showJumpControls={false}
+      />
+    </h1>
 
   return (
     <div className={sectionClassName}>

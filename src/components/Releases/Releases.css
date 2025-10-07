@@ -38,13 +38,59 @@
   position: relative;
 }
 
+/* newest release image styling */
 .artwork {
   height: 250px;
   width: 250px;
   z-index: 8000;
   position: relative;
   box-shadow: var(--shadow-offset);
-  border-radius: 4px;
+  border-radius: 3%;
+}
+
+.new-release-text {
+  gap: 20px;
+}
+
+.new-release-img-container {
+  position: relative;
+}
+
+.new-release-img-middle, .new-release-img-back, .new-release-img-front, .new-release-img-main {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  box-shadow: none;
+}
+
+.new-release-img-main {
+  position: absolute;
+  z-index: 8000;
+}
+
+.new-release-img-middle, .new-release-img-back, .new-release-img-front {
+  filter: blur(1px);
+}
+.new-release-img-front {
+  /* display: none; */
+  position: absolute;
+  transform: translate(10px, -10px);
+  z-index: 7000;
+  opacity: 0.7;
+
+}
+.new-release-img-middle {
+  /* display: none; */
+  position: absolute;
+  z-index: 8000;
+  transform: translate(20px, -20px);
+  opacity: 0.5;
+}
+.new-release-img-back {
+  /* display: none; */
+  z-index: 5000;
+  transform: translate(30px, -30px);
+  opacity: 0.3;
 }
 
 .cd-circle, .cd-album-circle {
