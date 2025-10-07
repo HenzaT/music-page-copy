@@ -1,7 +1,7 @@
 import About from '../../About/About';
 import { about } from '../../../data/aboutData';
 
-function ShamisenSection() {
+export default function ShamisenSection() {
   return (
     <div className="shamisen-section">
       <div className="banner">
@@ -14,5 +14,3 @@ function ShamisenSection() {
     </div>
   )
 }
-
-export default ShamisenSection;

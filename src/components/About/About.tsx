@@ -5,7 +5,7 @@ interface AboutProps {
   index: number
 }
 
-function About(props: AboutProps) {
+export default function About(props: AboutProps) {
   const { data, index } = props
   return (
     <div className="info">
@@ -13,5 +13,3 @@ function About(props: AboutProps) {
     </div>
   )
 }
-
-export default About

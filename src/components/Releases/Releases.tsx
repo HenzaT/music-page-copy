@@ -11,14 +11,18 @@ function Releases(props: ReleasesProps) {
       {props.data.map((release: ReleaseData, idx: number) => (
         release.released &&
         <div className="card flex-col" key={idx}>
-          <img src={release.img} alt={release.alt} className="artwork" />
+          <div className="album-artwork">
+            <img src={release.img} alt={release.alt} className="artwork" />
+            {release.tracklist.length > 1 ? <span className="cd-album-circle"></span> : <span className="cd-circle"></span>}
+          </div>
           <h2>{release.title}</h2>
-          <ol>
-            {release.tracklist.map((song, i) => (
-              <li key={i}>{song}</li>
-            ))}
-          </ol>
-          <h2>{release.releaseDate}</h2>
+          {release.tracklist.length > 1 &&
+            <ol>
+              {release.tracklist.map((song, i) => (
+                <li key={i}>{song}</li>
+              ))}
+            </ol>
+          }
         </div>
       ))}
     </div>

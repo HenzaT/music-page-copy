@@ -5,7 +5,7 @@ import { about } from '../../../data/aboutData';
 import { littleMoonReleases } from "../../../data/discographyData";
 import { links } from '../../../data/linksData';
 
-function LittleMoonSection() {
+export default function LittleMoonSection() {
   return (
     <div className="little-moon-section">
       <div className="banner">
@@ -23,5 +23,3 @@ function LittleMoonSection() {
     </div>
   )
 }
-
-export default LittleMoonSection;

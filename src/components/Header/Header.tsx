@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 
-
 interface HeaderProps {
   showOverlay: React.MouseEventHandler<HTMLButtonElement>,
   isRotated: boolean

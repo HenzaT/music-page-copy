@@ -1,8 +1,7 @@
-function ContactForm() {
-  return (
-    <div className="contact flex-col">
-      <h1>GET IN TOUCH</h1>
-      <p>If you'd like to get in touch regarding my music, you can send a message using this form</p>
+
+export default function ContactForm() {
+  const ContactForm = () => {
+    return (
       <form action="" className="flex-col">
         <label htmlFor="first-name">Name</label>
         <input type="text" name="first-name" id="first-name" />
@@ -15,8 +14,14 @@ function ContactForm() {
 
         <input type="submit" value="Submit" />
       </form>
+    )
+  }
+
+  return (
+    <div className="contact flex-col">
+      <h1>GET IN TOUCH</h1>
+      <p>If you'd like to get in touch regarding my music, you can send a message using this form</p>
+      <ContactForm />
     </div>
   )
 }
-
-export default ContactForm

@@ -5,7 +5,6 @@ export interface ReleaseData {
   img: string,
   alt: string,
   tracklist: string[],
-  releaseDate: string | false,
   released: boolean
 }
 
@@ -27,7 +26,6 @@ export const aptistReleases: ReleaseData[] = [
       'Some Days',
       'April Tea'
     ],
-    releaseDate: false,
     released: false
   },
   {
@@ -37,7 +35,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Some Days'
     ],
-    releaseDate: false,
     released: false
   },
   {
@@ -47,7 +44,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Revolutions'
     ],
-    releaseDate: false,
     released: false
   },
   {
@@ -57,7 +53,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Into Skies'
     ],
-    releaseDate: '28.08.25',
     released: true
   },
   {
@@ -68,7 +63,6 @@ export const aptistReleases: ReleaseData[] = [
       'Later',
       'Close Your Eyes'
     ],
-    releaseDate: '03.07.25',
     released: true
   },
   {
@@ -78,7 +72,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'April Tea'
     ],
-    releaseDate: '09.05.25',
     released: true
   },
   {
@@ -91,7 +84,6 @@ export const aptistReleases: ReleaseData[] = [
       'Think of June',
       'Gatehouse'
     ],
-    releaseDate: '09.05.25',
     released: true
   }
 ]
@@ -106,7 +98,6 @@ export const ppfReleases: ReleaseData[] = [
     tracklist: [
       'Four'
     ],
-    releaseDate: '27.09.19',
     released: true
   },
   {
@@ -116,7 +107,6 @@ export const ppfReleases: ReleaseData[] = [
     tracklist: [
       'The Last Time'
     ],
-    releaseDate: '25.05.19',
     released: true
   },
   {
@@ -126,7 +116,6 @@ export const ppfReleases: ReleaseData[] = [
     tracklist: [
       'Nothing Happens'
     ],
-    releaseDate: '25.04.19',
     released: true
   },
   {
@@ -136,7 +125,6 @@ export const ppfReleases: ReleaseData[] = [
     tracklist: [
       'Adrift'
     ],
-    releaseDate: '01.04.19',
     released: true
   },
 ]
@@ -152,7 +140,6 @@ export const littleMoonReleases: ReleaseData[] = [
       'Risk',
       'Charlie'
     ],
-    releaseDate: '13.05.16',
     released: true
   },
   {
@@ -162,7 +149,6 @@ export const littleMoonReleases: ReleaseData[] = [
     tracklist: [
       'Stepping On My Feet'
     ],
-    releaseDate: '13.12.15',
     released: true
   },
   {
@@ -172,7 +158,6 @@ export const littleMoonReleases: ReleaseData[] = [
     tracklist: [
       'Sapphire Blue'
     ],
-    releaseDate: '20.08.15',
     released: true
   },
   {
@@ -182,7 +167,6 @@ export const littleMoonReleases: ReleaseData[] = [
     tracklist: [
       'Charlie'
     ],
-    releaseDate: '22.06.15',
     released: true
   },
   {
@@ -192,7 +176,6 @@ export const littleMoonReleases: ReleaseData[] = [
     tracklist: [
       'Run Away'
     ],
-    releaseDate: '19.04.15',
     released: true
   },
 ]

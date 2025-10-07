@@ -1,7 +1,7 @@
 import About from '../../About/About';
 import { about } from '../../../data/aboutData';
 
-function FirstSwimSection() {
+export default function FirstSwimSection() {
   return (
     <div className="first-swim-section">
       <div className="banner">
@@ -11,10 +11,6 @@ function FirstSwimSection() {
         data={about}
         index={1}
       />
-      {/* Releases */}
-      {/* Links */}
     </div>
   )
 }
-
-export default FirstSwimSection;
