@@ -5,7 +5,13 @@
 .releases-cards > h1 {
   text-align: center;
   text-decoration: underline;
+}
 
+.releases-cards > p {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
 }
 
 .card {
@@ -15,11 +21,6 @@
 
 .card > h2 {
   padding-top: 20px;
-}
-
-.card > ol {
-  padding: 10px 0;
-  font-size: 1.1rem;
 }
 
 .card > img {
@@ -48,7 +49,7 @@
 
 .cd-circle, .cd-album-circle {
   position: absolute;
-  left: 75px;
+  left: 80px;
   top: 20px;
   background-color: #f5f5f5;
   background-image: linear-gradient(147deg, #f5f5f5 20%, #8C92E0);
@@ -62,4 +63,30 @@
 .cd-album-circle {
   background-color: #ffef9fff;
   background-image: linear-gradient(147deg, #ffef9fff 20%, #e0ce8c);
+  display: flex;
+}
+
+.cd-album-circle.flipped {
+  transition: transform 1s ease-in;
+}
+
+.tracklist {
+  font-size: 1.1rem;
+  color: var(--black);
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.tracklist-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flipped {
+  z-index: 8900;
+  transform: rotate(90deg);
 }

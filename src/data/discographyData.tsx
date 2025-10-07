@@ -12,7 +12,7 @@ export interface ReleaseData {
 export const aptistReleases: ReleaseData[] = [
   {
     title: 'Dream State',
-    img: './src/assets/aptist/Into-Skies.jpg',
+    img: './src/assets/aptist/dream-state.jpg',
     alt: 'Dream State Album Artwork',
     tracklist: [
       'Dream State',

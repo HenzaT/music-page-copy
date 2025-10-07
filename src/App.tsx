@@ -1,20 +1,24 @@
 import { useState, useRef } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import Header from './components/Header/Header';
 import Overlay from './components/Header/Overlay';
 import Section from './components/Sections/Section';
+
 import { aptistReleases } from './data/discographyData';
+import { ppfReleases } from './data/discographyData';
+import { littleMoonReleases } from './data/discographyData';
+
 import FirstSwimSection from './components/Sections/FirstSwimSection/FirstSwimSection';
 import ShamisenSection from './components/Sections/ShamisenSection/ShamisenSection';
-import PpfSection from './components/Sections/PPFSection/PpfSection';
-import LittleMoonSection from './components/Sections/LittleMoonSection/LittleMoonSection';
 import ContactForm from './components/Sections/ContactForm/ContactForm';
 import AboutSection from './components/Sections/AboutSection/AboutSection';
 import './styling/App.css'
 
 export default function App() {
-  const [ isRotated, setIsRotated ] = useState<boolean>(false)
+  const [ isRotated, setIsRotated ] = useState<boolean>(false);
+  const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
 
   const showOverlay = () => {
     const wholeBody = document.body.classList;
@@ -24,6 +28,10 @@ export default function App() {
     } else {
       wholeBody.remove('stop-scrolling');
     }
+  }
+
+  const showTracklist = () => {
+    setIsFlipped(prevIsFlipped => !prevIsFlipped);
   }
 
   const RouteTransition = () => {
@@ -36,16 +44,39 @@ export default function App() {
             <Routes location={location}>
               <Route path="aptist" element={
                 <Section
+                  artistName={'aptist'}
                   sectionClassName={'aptist-section'}
                   artistReleases={aptistReleases}
                   aboutDataIndex={0}
                   linksDataIndex={0}
+                  showTracklist={showTracklist}
+                  isFlipped={isFlipped}
                 />}
               />
               <Route path="first-swim" element={<FirstSwimSection />} />
               <Route path="shamisen" element={<ShamisenSection />} />
-              <Route path="paulo-post-future" element={<PpfSection />} />
-              <Route path="little-moon" element={<LittleMoonSection />} />
+              <Route path="paulo-post-future" element={
+                <Section
+                  artistName={'Paulo Post Future'}
+                  sectionClassName={'ppf-section'}
+                  artistReleases={ppfReleases}
+                  aboutDataIndex={2}
+                  linksDataIndex={2}
+                  showTracklist={showTracklist}
+                  isFlipped={isFlipped}
+                />}
+              />
+              <Route path="little-moon" element={
+                <Section
+                  artistName={'Little Moon'}
+                  sectionClassName={'little-moon-section'}
+                  artistReleases={littleMoonReleases}
+                  aboutDataIndex={3}
+                  linksDataIndex={2}
+                  showTracklist={showTracklist}
+                  isFlipped={isFlipped}
+                />}
+              />
               <Route path="contact" element={<ContactForm />} />
               <Route path="about" element={<AboutSection />} />
             </Routes>
