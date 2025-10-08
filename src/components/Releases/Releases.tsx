@@ -26,7 +26,10 @@ function Releases(props: ReleasesProps) {
   return (
     <div className="releases-cards">
       <h1>Releases</h1>
-      <p>Select any gold disc to see the full tracklist</p>
+      <div className="release-text flex-col">
+        <p>Select a release to show the disc.</p>
+        <p>Select any gold disc to see the full tracklist.</p>
+      </div>
       {data.map((release: ReleaseData) => (
         release.released &&
         <div className="card flex-col" key={release.img}>

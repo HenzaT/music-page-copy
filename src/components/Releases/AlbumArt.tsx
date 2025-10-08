@@ -22,7 +22,7 @@ export default function AlbumArt(props: AlbumArtProps) {
 
   const silverCircle = <span className={isCollapsed ? "cd-circle" : "cd-circle hidden"}></span>;
     const goldCircle =
-      <span className={isFlipped ? "cd-album-circle flipped" : "cd-album-circle"} onClick={showTracklist}>
+      <span className={isFlipped ? "cd-circle cd-album flipped" : "cd-circle cd-album"} onClick={showTracklist}>
         <div className="tracklist">
           <div className="tracklist-inner">
             {data.map((release: ReleaseData) => (

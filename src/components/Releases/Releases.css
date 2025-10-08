@@ -7,9 +7,9 @@
   text-decoration: underline;
 }
 
-.releases-cards > p {
+.release-text {
   text-align: center;
-  width: 50%;
+  width: 60%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -82,7 +82,7 @@
 .faded-square-3,
 .faded-square-4 {
   filter: blur(1px);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .new-release-img-main {
@@ -117,7 +117,7 @@
 }
 
 
-.cd-circle, .cd-album-circle {
+.cd-circle {
   position: absolute;
   left: 80px;
   top: 20px;
@@ -128,16 +128,16 @@
   border-radius: 50%;
   border: 5px double black;
   box-shadow: var(--shadow-behind);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
-.cd-album-circle {
+.cd-album {
   background-color: #ffef9fff;
   background-image: linear-gradient(147deg, #ffef9fff 20%, #e0ce8c);
   display: flex;
 }
 
-.cd-album-circle.flipped {
+.cd-album.flipped {
   transition: transform 1s ease-in;
 }
 

@@ -5,6 +5,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Header from './components/Header/Header';
 import Overlay from './components/Header/Overlay';
 import Section from './components/Sections/Section';
+import ScrollToTop from './components/ScrollToTop';
 
 import { aptistReleases } from './data/discographyData';
 import { ppfReleases } from './data/discographyData';
@@ -77,6 +78,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header
         showOverlay={showOverlay}
         isRotated={isRotated}
