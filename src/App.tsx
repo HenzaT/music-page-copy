@@ -18,7 +18,6 @@ import './styling/App.css'
 
 export default function App() {
   const [ isRotated, setIsRotated ] = useState<boolean>(false);
-  const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
 
   const showOverlay = () => {
     const wholeBody = document.body.classList;
@@ -28,10 +27,6 @@ export default function App() {
     } else {
       wholeBody.remove('stop-scrolling');
     }
-  }
-
-  const showTracklist = () => {
-    setIsFlipped(prevIsFlipped => !prevIsFlipped);
   }
 
   const RouteTransition = () => {
@@ -49,8 +44,6 @@ export default function App() {
                   artistReleases={aptistReleases}
                   aboutDataIndex={0}
                   linksDataIndex={0}
-                  showTracklist={showTracklist}
-                  isFlipped={isFlipped}
                 />}
               />
               <Route path="first-swim" element={<FirstSwimSection />} />
@@ -62,8 +55,6 @@ export default function App() {
                   artistReleases={ppfReleases}
                   aboutDataIndex={2}
                   linksDataIndex={2}
-                  showTracklist={showTracklist}
-                  isFlipped={isFlipped}
                 />}
               />
               <Route path="little-moon" element={
@@ -73,8 +64,6 @@ export default function App() {
                   artistReleases={littleMoonReleases}
                   aboutDataIndex={3}
                   linksDataIndex={2}
-                  showTracklist={showTracklist}
-                  isFlipped={isFlipped}
                 />}
               />
               <Route path="contact" element={<ContactForm />} />

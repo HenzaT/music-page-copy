@@ -39,7 +39,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Revolutions',
-    img: './src/assets/aptist/Into-Skies.jpg',
+    img: './src/assets/aptist/I.jpg',
     alt: 'Revolutions Artwork',
     tracklist: [
       'Revolutions'

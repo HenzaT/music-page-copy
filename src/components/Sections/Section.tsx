@@ -14,8 +14,6 @@ interface SectionProps {
   aboutDataIndex: number,
   linksDataIndex: number,
   artistReleases: ReleaseData[]
-  showTracklist: React.MouseEventHandler<HTMLSpanElement>
-  isFlipped: boolean
 }
 
 export default function Section(props: SectionProps) {
@@ -25,8 +23,6 @@ export default function Section(props: SectionProps) {
     aboutDataIndex,
     linksDataIndex,
     artistReleases,
-    showTracklist,
-    isFlipped
   } = props;
 
   const newestAptistRelease = aptistReleases.find(({ released }) => released);
@@ -41,16 +37,17 @@ export default function Section(props: SectionProps) {
   const newestAptistReleaseName =
     <h1 className="new-release-text flex-col">
       <div className="new-release-img-container">
-        {newestAptistImage('front')}
-        {newestAptistImage('middle')}
+        <span className="faded-square-4"></span>
+        <span className="faded-square-3"></span>
+        <span className="faded-square-2"></span>
+        <span className="faded-square-1"></span>
         {newestAptistImage('main')}
-        {newestAptistImage('back')}
       </div>
       {newestAptistRelease?.title}. <br />Stream it now.
       <AudioPlayer
-      src='./src/assets/audio/3. clairo 606.mp3'
-      volume={0.5}
-      showJumpControls={false}
+        src='./src/assets/audio/3. clairo 606.mp3'
+        volume={0.5}
+        showJumpControls={false}
       />
     </h1>
 
@@ -68,8 +65,6 @@ export default function Section(props: SectionProps) {
       />
       <Releases
         data={artistReleases}
-        showTracklist={showTracklist}
-        isFlipped={isFlipped}
       />
       <Links
         data={links}
