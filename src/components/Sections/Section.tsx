@@ -29,7 +29,6 @@ export default function Section({ artistName, sectionClassName, aboutDataIndex, 
   const newestAptistReleaseName =
     <h1 className="new-release-text flex-col">
       <div className="new-release-img-container">
-        <span className="faded-square-4"></span>
         <span className="faded-square-3"></span>
         <span className="faded-square-2"></span>
         <span className="faded-square-1"></span>
@@ -37,7 +36,7 @@ export default function Section({ artistName, sectionClassName, aboutDataIndex, 
       </div>
       {newestAptistRelease?.title}. <br />Stream it now.
       <AudioPlayer
-        src='./src/assets/audio/3. clairo 606.mp3'
+        src='https://soundcloud.com/aptist1/into-skies-master-5-8-25-2'
         volume={0.5}
         showJumpControls={false}
       />

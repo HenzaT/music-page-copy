@@ -1,0 +1,19 @@
+.about {
+  height: 100vh;
+  width: 70vw;
+  text-align: justify;
+  margin: auto;
+  overflow-wrap: break-word;
+}
+
+.about > h1 {
+  margin-bottom: 10px;
+}
+
+.about-text-paragraphs {
+  gap: 20px;
+}
+
+.weblink {
+  font-size: 2rem;
+}

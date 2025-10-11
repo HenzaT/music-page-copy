@@ -20,8 +20,6 @@ export default function AlbumArt({ releaseImg, releaseAlt, data, tracklistLength
     'hidden': !isCollapsed,
   });
 
-  console.log(data.filter(r => r.tracklist.length > 1));
-
   const silverCircle = <span className={isCollapsed ? "cd-circle" : "cd-circle hidden"}></span>;
     const goldCircle =
       <span className={discClasses} onClick={showTracklist}>
@@ -39,7 +37,6 @@ export default function AlbumArt({ releaseImg, releaseAlt, data, tracklistLength
   return (
     <div className="album-artwork">
       <div className="release-img-container" onClick={toggleSquares}>
-        <span className={isCollapsed ? "faded-square-4 collapsed" : "faded-square-4"}></span>
         <span className={isCollapsed ? "faded-square-3 collapsed" : "faded-square-3"}></span>
         <span className={isCollapsed ? "faded-square-2 collapsed" : "faded-square-2"}></span>
         <span className={isCollapsed ? "faded-square-1 collapsed" : "faded-square-1"}></span>

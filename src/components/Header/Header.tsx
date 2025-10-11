@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-interface HeaderProps {
+export interface HeaderProps {
   showOverlay: React.MouseEventHandler<HTMLButtonElement>,
   isRotated: boolean
 }
@@ -13,6 +13,7 @@ function Header({ showOverlay, isRotated }: HeaderProps) {
           <img src="./src/assets/images/synth.png" alt="png image of synth" className="nav-icon" />
         </button>
       </NavLink>
+      <a href="#top" className="back-to-top"></a>
       <button
         type="button"
         onClick={showOverlay}

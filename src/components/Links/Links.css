@@ -9,6 +9,18 @@
 
 .artist-links > a {
   color: inherit;
-  font-size: 2.4rem;
+  font-size: 2rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.svg-inline--fa {
+  border-radius: 50%;
+  border: none;
+  padding: 6px 3px;
+  box-shadow: 0px 0px 10px var(--black);
+}
+
+.artist-links > a:hover {
+  transform: var(--hover-up);
 }

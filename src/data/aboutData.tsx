@@ -25,7 +25,7 @@ export const about: AboutData[] = [
   {
     artist: 'Paulo Post Future',
     text: `I played bass guitar in this 5 piece. As we had three guitarists, we played with different textures
-    and eschewed the typical lead/rhythm guitar divide. The drums were often a focal point in our songs, as
+    and could avoid the typical lead/rhythm guitar divide. The drums were often a focal point in our songs, as
     our drummer was influenced more by electronic music than rock or indie.`,
     text2: `The name came after flicking through a dictionary in a recording studio. We played many gigs together
     (the biggest artist we supported was Benee, before she went viral in 2020)`
@@ -39,7 +39,7 @@ export const about: AboutData[] = [
   },
   {
     artist: 'Shamisen',
-    text: `I play a traditional Japanese instrument called the shamisen, which is a three-stringed instrument similar
+    text: `I play a Japanese instrument called the shamisen, which is a three-stringed instrument similar
     in sound to a banjo. I enjoy it as it is a way of playing/listening to non-western music, as Japanese music
     can be very different.`,
     text2: `It's used more and more in modern J-rock and J-pop as it has a loud and distinct sound. Recently, I have

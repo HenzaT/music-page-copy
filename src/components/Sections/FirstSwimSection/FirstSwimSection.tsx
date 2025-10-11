@@ -1,4 +1,5 @@
 import About from '../../About/About';
+// import Releases from '../../Releases/Releases';
 import { about } from '../../../data/aboutData';
 
 export default function FirstSwimSection() {
@@ -11,6 +12,12 @@ export default function FirstSwimSection() {
         data={about}
         index={1}
       />
+      <div className="releases-cards">
+        <h1>Releases</h1>
+        <div className="release-text flex-col">
+          <p>Coming Soon.</p>
+        </div>
+      </div>
     </div>
   )
 }

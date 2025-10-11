@@ -1,7 +1,8 @@
 .shamisen-section {
   background: var(--taupe);
+  color: var(--dark-taupe);
 }
 
 .shamisen-h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
 }

@@ -8,7 +8,7 @@ import Section from './components/Sections/Section';
 import ScrollToTop from './components/ScrollToTop';
 import FirstSwimSection from './components/Sections/FirstSwimSection/FirstSwimSection';
 import ShamisenSection from './components/Sections/ShamisenSection/ShamisenSection';
-import ContactForm from './components/Sections/ContactForm/ContactForm';
+// import ContactForm from './components/Sections/ContactForm/ContactForm';
 import AboutSection from './components/Sections/AboutSection/AboutSection';
 import './styling/App.css'
 
@@ -67,7 +67,7 @@ export default function App() {
                   linksDataIndex={2}
                 />}
               />
-              <Route path="contact" element={<ContactForm />} />
+              {/* <Route path="contact" element={<ContactForm />} /> */}
               <Route path="about" element={<AboutSection />} />
             </Routes>
           </div>
@@ -83,7 +83,10 @@ export default function App() {
         showOverlay={showOverlay}
         isRotated={!isRotated}
       />
-      {!isRotated && <Overlay />}
+      {!isRotated &&
+      <Overlay
+        showOverlay={showOverlay}
+      />}
       <RouteTransition />
     </BrowserRouter>
   )

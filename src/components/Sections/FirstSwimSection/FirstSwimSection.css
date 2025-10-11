@@ -1,3 +1,4 @@
 .first-swim-section {
-  background: var(--blue);
+  background: var(--dark-blue);
+  color: var(--blue);
 }

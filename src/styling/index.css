@@ -42,13 +42,13 @@ p {
 /* variables */
 :root {
   --black: #221E22;
-  --white: #f5eff5;
+  --white: #f2dff2;
   /* aptist */
-  --yellow: #bf7900;
+  --yellow: #d89e39;
   --dark-yellow: #895802;
   /* first swim */
-  --blue: #3b8dae;
-  --dark-blue: #225467;
+  --blue: #daf3fd;
+  --dark-blue: #3b8dae;
   /* paulo post future */
   --orange: #b53308;
   --dark-orange: #7d2305;
@@ -57,7 +57,7 @@ p {
   --dark-purple: #31263E;
   /* shamisen */
   --taupe: #dfbfbf;
-  --dark-taupe: #8e7575;
+  --dark-taupe: #672e2e;
 
   /* shadow */
   --shadow-offset: 7px 7px 17px var(--black);
@@ -65,6 +65,8 @@ p {
   /* border */
   --border: 1px solid var(--black);
   --b-radius: 30px;
+  /* hover */
+  --hover-up: translateY(-3px);
 }
 
 /* often used css */
