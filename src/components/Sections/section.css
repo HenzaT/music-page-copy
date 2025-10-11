@@ -17,7 +17,7 @@
   font-style: normal;
   font-variation-settings:
   "ROND" 0; */
-  margin-top: auto;
+  margin-top: 20px;
 }
 
 .new-release-text {
@@ -27,6 +27,7 @@
 
 .ppf-section {
   background: var(--orange);
+  color: var(--white);
 }
 
 .little-moon-section {

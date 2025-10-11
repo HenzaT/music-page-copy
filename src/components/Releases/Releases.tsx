@@ -10,7 +10,7 @@ function Releases({ data }: ReleasesProps ) {
     <div className="releases-cards">
       <h1>Releases</h1>
       <div className="release-text flex-col">
-        <p>Select a release to show the disc.</p>
+        <p>Select a release.</p>
         <p>Select any gold disc to see the full tracklist.</p>
       </div>
       {data.map((release: ReleaseData) => (
@@ -22,6 +22,7 @@ function Releases({ data }: ReleasesProps ) {
               releaseAlt={release.alt}
               data={data}
               tracklistLength={release.tracklist.length}
+              release={release}
             />
           </div>
           <h2>{release.title}</h2>

@@ -30,6 +30,7 @@
   width: 60px;
   height: 60px;
 }
+
 .rhap_progress-indicator {
   background: var(--black);
 }
@@ -37,6 +38,7 @@
   background-color: var(--dark-yellow);
 }
 
+/* route transitions */
 .fade-enter {
   opacity: 0;
   transform: translate(0, 25px);

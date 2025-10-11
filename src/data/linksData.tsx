@@ -2,11 +2,11 @@
 
 export interface LinkData {
   artist: string,
-  spotify: string | null,
-  apple: string | null,
-  tidal: string | null,
-  deezer: string | null,
-  bandcamp: string | null
+  spotify: string,
+  apple: string,
+  tidal: string,
+  deezer: string,
+  bandcamp: string
 }
 
 export const links: LinkData[] =  [
@@ -14,8 +14,8 @@ export const links: LinkData[] =  [
     artist: 'aptist',
     spotify: 'https://open.spotify.com/artist/3iUZV8FaZhxoteUhmkvTy3?si=OjnmS-UeQ1mhDQAUamN4QA',
     apple: 'https://music.apple.com/us/artist/aptist/1555855403',
-    tidal: '',
-    deezer: '',
+    tidal: 'https://tidal.com/browse/artist/23719868?u',
+    deezer: 'https://www.deezer.com/en/artist/124929342',
     bandcamp: 'https://aptist.bandcamp.com/'
   },
   // {
@@ -31,7 +31,7 @@ export const links: LinkData[] =  [
     spotify: 'https://open.spotify.com/artist/6NLOQuZbhrOW98PkNwWxLe?si=VVTq_bk7RwKdB0PTNyOxIQ',
     apple: 'https://music.apple.com/us/artist/paulo-post-future/1390306644',
     tidal: 'https://tidal.com/browse/artist/10246985',
-    deezer: '',
+    deezer: 'https://www.deezer.com/en/artist/50431462',
     bandcamp: 'https://paulopostfuture.bandcamp.com/'
   },
   {
@@ -39,7 +39,7 @@ export const links: LinkData[] =  [
     spotify: 'https://open.spotify.com/artist/5vPN6DkbKQBkhSuXSixFrI?si=SVMzlkTzSpuRZD3lHOOMFg',
     apple: 'https://music.apple.com/us/artist/little-moon/1059128577',
     tidal: '',
-    deezer: '',
+    deezer: 'https://www.deezer.com/en/album/13112348',
     bandcamp: 'https://littlemoonofficial.bandcamp.com/'
   },
 ]
