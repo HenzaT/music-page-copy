@@ -1,6 +1,6 @@
 .info {
-  text-align: right;
-  padding: 0 30px 0 70px;
   width: 60vw;
-  margin-left: auto;
+  text-align: justify;
+  margin: auto;
+  overflow-wrap: break-word;
 }

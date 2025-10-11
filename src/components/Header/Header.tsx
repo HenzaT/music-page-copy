@@ -5,8 +5,7 @@ interface HeaderProps {
   isRotated: boolean
 }
 
-function Header(props: HeaderProps) {
-  const { showOverlay, isRotated } = props
+function Header({ showOverlay, isRotated }: HeaderProps) {
   return (
     <div className="header">
       <NavLink to="/aptist">

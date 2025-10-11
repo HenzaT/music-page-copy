@@ -10,6 +10,8 @@ export default function About(props: AboutProps) {
   return (
     <div className="info">
       <p>{data[index].text}</p>
+      <br />
+      <p>{data[index].text2}</p>
     </div>
   )
 }

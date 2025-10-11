@@ -15,16 +15,17 @@ export const aptistReleases: ReleaseData[] = [
     img: './src/assets/aptist/dream-state.jpg',
     alt: 'Dream State Album Artwork',
     tracklist: [
+      'Main Sequence',
       'Dream State',
       'Into Skies',
-      'Wazukana',
+      'Invisible',
       "What's The Night For?",
-      'Close Your Eyes',
       'Horizon',
       'Revolutions',
       'Later',
       'Some Days',
-      'April Tea'
+      'April Tea',
+      'All Mine.'
     ],
     released: false
   },

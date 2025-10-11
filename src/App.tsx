@@ -6,24 +6,24 @@ import Header from './components/Header/Header';
 import Overlay from './components/Header/Overlay';
 import Section from './components/Sections/Section';
 import ScrollToTop from './components/ScrollToTop';
-
-import { aptistReleases } from './data/discographyData';
-import { ppfReleases } from './data/discographyData';
-import { littleMoonReleases } from './data/discographyData';
-
 import FirstSwimSection from './components/Sections/FirstSwimSection/FirstSwimSection';
 import ShamisenSection from './components/Sections/ShamisenSection/ShamisenSection';
 import ContactForm from './components/Sections/ContactForm/ContactForm';
 import AboutSection from './components/Sections/AboutSection/AboutSection';
 import './styling/App.css'
 
+import { aptistReleases } from './data/discographyData';
+import { ppfReleases } from './data/discographyData';
+import { littleMoonReleases } from './data/discographyData';
+
+
 export default function App() {
-  const [ isRotated, setIsRotated ] = useState<boolean>(false);
+  const [ isRotated, setIsRotated ] = useState<boolean>(true);
 
   const showOverlay = () => {
     const wholeBody = document.body.classList;
     setIsRotated(prevIsRotated => !prevIsRotated)
-    if (!isRotated) {
+    if (isRotated) {
       wholeBody.add('stop-scrolling');
     } else {
       wholeBody.remove('stop-scrolling');
@@ -81,9 +81,9 @@ export default function App() {
       <ScrollToTop />
       <Header
         showOverlay={showOverlay}
-        isRotated={isRotated}
+        isRotated={!isRotated}
       />
-      {isRotated && <Overlay />}
+      {!isRotated && <Overlay />}
       <RouteTransition />
     </BrowserRouter>
   )

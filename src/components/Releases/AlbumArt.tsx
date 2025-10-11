@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import classNames from 'classnames';
 import type { ReleaseData } from '../../data/discographyData'
 
 interface AlbumArtProps {
@@ -8,24 +9,22 @@ interface AlbumArtProps {
   tracklistLength: number
 }
 
-export default function AlbumArt(props: AlbumArtProps) {
-  const { releaseImg, releaseAlt, data, tracklistLength } = props
-
+export default function AlbumArt({ releaseImg, releaseAlt, data, tracklistLength }: AlbumArtProps) {
   const [ isCollapsed, setIsCollapsed ] = useState<boolean>(false);
   const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
-  const toggleSquares = () => {
-    setIsCollapsed(prevIsCollapsed => !prevIsCollapsed);
-  }
-  const showTracklist = () => {
-    setIsFlipped(prevIsFlipped => !prevIsFlipped);
-  }
+  const toggleSquares = () => { setIsCollapsed(prevIsCollapsed => !prevIsCollapsed) };
+  const showTracklist = () => { setIsFlipped(prevIsFlipped => !prevIsFlipped); };
+  const discClasses = classNames('cd-circle cd-album', {
+    'flipped': isFlipped,
+    'hidden': !isCollapsed,
+  });
 
   const silverCircle = <span className={isCollapsed ? "cd-circle" : "cd-circle hidden"}></span>;
     const goldCircle =
-      <span className={isFlipped ? "cd-circle cd-album flipped" : "cd-circle cd-album"} onClick={showTracklist}>
+      <span className={discClasses} onClick={showTracklist}>
         <div className="tracklist">
           <div className="tracklist-inner">
-            {data.map((release: ReleaseData) => (
+            {data.map((release: ReleaseData, position: number) => (
               release.tracklist.length > 1 &&
               release.tracklist.map((song, idx) => (
                 <p key={idx}>{song}</p>

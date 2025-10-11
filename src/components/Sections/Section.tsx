@@ -16,15 +16,7 @@ interface SectionProps {
   artistReleases: ReleaseData[]
 }
 
-export default function Section(props: SectionProps) {
-  const {
-    artistName,
-    sectionClassName,
-    aboutDataIndex,
-    linksDataIndex,
-    artistReleases,
-  } = props;
-
+export default function Section({ artistName, sectionClassName, aboutDataIndex, linksDataIndex, artistReleases }: SectionProps) {
   const newestAptistRelease = aptistReleases.find(({ released }) => released);
   const newestAptistImage = (description: string) => (
     <img
