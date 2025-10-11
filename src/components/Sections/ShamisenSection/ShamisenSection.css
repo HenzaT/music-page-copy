@@ -1,6 +1,7 @@
 .shamisen-section {
   background: var(--taupe);
   color: var(--dark-taupe);
+  padding-bottom: 40px;
 }
 
 .shamisen-h1 {

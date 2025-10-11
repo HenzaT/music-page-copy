@@ -1,9 +1,10 @@
 .about {
   height: 100vh;
-  width: 70vw;
   text-align: justify;
   margin: auto;
   overflow-wrap: break-word;
+  background: var(--black);
+  color: var(--white);
 }
 
 .about > h1 {
@@ -12,8 +13,10 @@
 
 .about-text-paragraphs {
   gap: 20px;
+  width: 70vw;
 }
 
 .weblink {
+  color: var(--yellow);
   font-size: 2rem;
 }

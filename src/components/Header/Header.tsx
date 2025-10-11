@@ -1,3 +1,4 @@
+// import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export interface HeaderProps {
@@ -5,7 +6,9 @@ export interface HeaderProps {
   isRotated: boolean
 }
 
+
 function Header({ showOverlay, isRotated }: HeaderProps) {
+
   return (
     <div className="header">
       <NavLink to="/aptist">

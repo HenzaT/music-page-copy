@@ -27,7 +27,7 @@ function Overlay({ showOverlay }: OverlayProps) {
       {navLink('/paulo-post-future', showOverlay, 'Paulo Post Future')}
       {navLink('/little-moon', showOverlay, 'Little Moon')}
       {dividingLine}
-      {navLink('/contact', showOverlay, 'Contact')}
+      {/* {navLink('/contact', showOverlay, 'Contact')} */}
       {navLink('/about', showOverlay, 'About')}
     </div>
   )

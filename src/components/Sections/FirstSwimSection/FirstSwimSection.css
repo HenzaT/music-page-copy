@@ -1,4 +1,9 @@
 .first-swim-section {
   background: var(--dark-blue);
   color: var(--blue);
+  padding-bottom: 15px;
+}
+
+.fs-release {
+  margin-bottom: 20px;
 }
