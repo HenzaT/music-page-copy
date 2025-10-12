@@ -13,7 +13,7 @@
 
 .dividing-line {
   height: 2px;
-  width: 70px;
+  width: 10%;
   background-color: var(--black);
   border-radius: 50px;
   margin: 20px 0;

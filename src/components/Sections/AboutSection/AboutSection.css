@@ -16,7 +16,41 @@
   width: 70vw;
 }
 
+.about-text-paragraphs > a {
+  transition: transform 0.2s ease-in-out;
+}
+
+.about-text-paragraphs > a:hover {
+  transform: var(--hover-up);
+}
+
 .weblink {
   color: var(--yellow);
   font-size: 2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.weblink:hover {
+  color: var(--dark-blue);
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .about-text-paragraphs {
+    max-width: 40%;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .about-text-paragraphs {
+    max-width: 40%;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .about-text-paragraphs {
+    max-width: 40%;
+  }
 }

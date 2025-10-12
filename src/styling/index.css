@@ -1,12 +1,10 @@
 @import url('../components/Header/Header.css');
 @import url('../components/Header/Overlay.css');
 @import url('../components/Releases/Releases.css');
+@import url('../components/Releases/AlbumArt.css');
 @import url('../components/Sections/section.css');
 @import url('../components/About/About.css');
 @import url('../components/Links/Links.css');
-
-@import url('../components/Sections/FirstSwimSection/FirstSwimSection.css');
-@import url('../components/Sections/ShamisenSection/ShamisenSection.css');
 @import url('../components/Sections/ContactForm/ContactForm.css');
 @import url('../components/Sections/AboutSection/AboutSection.css');
 
@@ -81,4 +79,12 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }

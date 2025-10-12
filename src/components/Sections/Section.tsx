@@ -9,14 +9,15 @@ import type { ReleaseData } from '../../data/discographyData';
 import 'react-h5-audio-player/lib/styles.css'
 
 interface SectionProps {
-  artistName: string
+  artistName: string,
+  artistClassName: string,
   sectionClassName: string,
   aboutDataIndex: number,
   linksDataIndex: number,
   artistReleases: ReleaseData[]
 }
 
-export default function Section({ artistName, sectionClassName, aboutDataIndex, linksDataIndex, artistReleases }: SectionProps) {
+export default function Section({ artistName, artistClassName, sectionClassName, aboutDataIndex, linksDataIndex, artistReleases }: SectionProps) {
   const newestAptistRelease = aptistReleases.find(({ released }) => released);
   const newestAptistImage = (description: string) => (
     <img
@@ -49,7 +50,7 @@ export default function Section({ artistName, sectionClassName, aboutDataIndex, 
           newestAptistReleaseName
         }
         <div className="main-header-center-align">
-          <h1 className={`main-header ${artistName}-h1`}>{artistName}</h1>
+          <h1 className={`main-header ${artistClassName}-h1`}>{artistName}</h1>
         </div>
       </div>
       <About

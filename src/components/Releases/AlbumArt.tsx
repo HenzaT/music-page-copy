@@ -40,7 +40,7 @@ export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, rele
         <span className={isCollapsed ? "faded-square-3 collapsed" : "faded-square-3"}></span>
         <span className={isCollapsed ? "faded-square-2 collapsed" : "faded-square-2"}></span>
         <span className={isCollapsed ? "faded-square-1 collapsed" : "faded-square-1"}></span>
-        <img src={releaseImg} alt={releaseAlt} className={isCollapsed ? "artwork shadow" : "artwork"} />
+        <img src={releaseImg} alt={releaseAlt} className={isCollapsed ? "artwork shadow" : "artwork"} loading="lazy" />
       </div>
       {tracklistLength > 1 ? goldCircle : silverCircle}
     </div>

@@ -43,3 +43,24 @@
 .rotated {
   transform: rotate(45deg);
 }
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .header {
+    width: 80%;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .header {
+    width: 80%;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .header {
+    width: 80%;
+  }
+}

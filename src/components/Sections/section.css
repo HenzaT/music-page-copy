@@ -1,5 +1,12 @@
-/* shared css for all sections */
+/*  just aptist banner styling */
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
+/* shared css for all sections */
 .main-header-center-align {
   width: 70vw;
   margin: 0 auto;
@@ -12,17 +19,7 @@
   font-weight: 700;
 }
 
-.aptist-section {
-  background: var(--yellow);
-}
-
 .aptist-h1 {
-  /* font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-  "ROND" 0; */
   margin-top: 70px;
   text-align: center;
 }
@@ -32,21 +29,65 @@
   margin-top: auto;
 }
 
+.aptist-section {
+  background: var(--yellow);
+}
 .ppf-section {
   background: var(--orange);
   color: var(--white);
 }
-
 .little-moon-section {
   background: var(--purple);
   color: var(--yellow);
 }
+.first-swim-section {
+  background: var(--dark-blue);
+  color: var(--blue);
+  padding-bottom: 30px;
+}
+.shamisen-section {
+  background: var(--taupe);
+  color: var(--dark-taupe);
+  padding-bottom: 40px;
+}
 
-.little-moon-h1 {
-  /* font-family: "Doto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-  "ROND" 0; */
+.fs-release {
+  margin-bottom: 20px;
+}
+
+.shamisen-h1 {
+  font-size: 4.5rem;
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .main-header {
+    font-size: 8rem;
+  }
+  .aptist-h1 {
+    margin-top: 50px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .main-header {
+    font-size: 9rem;
+  }
+  .aptist-h1 {
+    margin-top: 50px;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .main-header {
+    font-size: 9rem;
+  }
+  .aptist-h1 {
+    margin-top: 50px;
+  }
+  .ppf-h1 {
+    font-size: 7rem;
+  }
 }

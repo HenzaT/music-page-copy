@@ -31,7 +31,9 @@ export default function ShamisenSection() {
         }}
       /> */}
       <div className="banner">
-        <h1 className="main-header shamisen-h1">Shamisen</h1>
+        <div className="main-header-center-align">
+          <h1 className="main-header shamisen-h1">Shamisen</h1>
+        </div>
       </div>
       <About
         data={about}

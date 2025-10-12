@@ -41,6 +41,7 @@ export default function App() {
               <Route path="aptist" element={
                 <Section
                   artistName={'aptist'}
+                  artistClassName={'aptist'}
                   sectionClassName={'aptist-section'}
                   artistReleases={aptistReleases}
                   aboutDataIndex={0}
@@ -52,6 +53,7 @@ export default function App() {
               <Route path="paulo-post-future" element={
                 <Section
                   artistName={'Paulo Post Future'}
+                  artistClassName={'ppf'}
                   sectionClassName={'ppf-section'}
                   artistReleases={ppfReleases}
                   aboutDataIndex={2}
@@ -61,6 +63,7 @@ export default function App() {
               <Route path="little-moon" element={
                 <Section
                   artistName={'Little Moon'}
+                  artistClassName={'little-moon'}
                   sectionClassName={'little-moon-section'}
                   artistReleases={littleMoonReleases}
                   aboutDataIndex={3}
