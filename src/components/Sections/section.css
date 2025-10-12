@@ -1,9 +1,15 @@
 /* shared css for all sections */
 
+.main-header-center-align {
+  width: 70vw;
+  margin: 0 auto;
+}
+
 .main-header {
-  font-size: 6rem;
-  text-align: center;
+  font-size: 5.5rem;
+  text-align: left;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .aptist-section {
@@ -17,7 +23,8 @@
   font-style: normal;
   font-variation-settings:
   "ROND" 0; */
-  margin-top: 20px;
+  margin-top: 70px;
+  text-align: center;
 }
 
 .new-release-text {

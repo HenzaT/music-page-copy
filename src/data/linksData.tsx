@@ -6,7 +6,8 @@ export interface LinkData {
   apple: string,
   tidal: string,
   deezer: string,
-  bandcamp: string
+  bandcamp: string,
+  [key: string]: string | undefined
 }
 
 export const links: LinkData[] =  [

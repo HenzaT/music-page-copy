@@ -19,6 +19,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-h5-audio-player": "^3.10.1",
+    "react-responsive": "^10.0.1",
     "react-router-dom": "^7.9.3",
     "react-spring": "^10.0.3",
     "react-transition-group": "^4.4.5"

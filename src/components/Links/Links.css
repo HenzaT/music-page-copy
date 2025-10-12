@@ -7,20 +7,22 @@
   margin: auto;
 }
 
-.artist-links > a {
+.link-circle > a {
   color: inherit;
   font-size: 2rem;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
 }
 
-.svg-inline--fa {
+.link-circle {
   border-radius: 50%;
   border: none;
   padding: 6px 3px;
   box-shadow: 0px 0px 6px var(--black);
+  transition: transform 0.2s ease-in-out;
 }
 
-.artist-links > a:hover {
-  transform: var(--hover-up);
-}
+.aptist-shadow { box-shadow: 0px 0px 6px var(--dark-yellow); }
+.ppf-shadow { box-shadow: 0px 0px 6px var(--dark-orange); }
+.lm-shadow { box-shadow: 0px 0px 6px var(--dark-purple); }
+
+.link-circle:hover { transform: var(--hover-up); }

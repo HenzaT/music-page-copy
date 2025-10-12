@@ -1,23 +1,24 @@
 import { NavLink } from 'react-router-dom';
 
+
 interface OverlayProps {
   showOverlay: React.MouseEventHandler<HTMLAnchorElement>
 }
 
 const navLinkStyles = ({ isActive }: { isActive: boolean }) => ({
-  color: isActive ? 'var(--dark-orange)' : 'var(--black)',
+  color: 'var(--black)',
   textDecoration: isActive ? 'underline' : 'none',
-  fontWeight: isActive ? 'bold' : 'normal',
+  fontWeight: '700',
   padding: '5px 10px'
 });
 
 const dividingLine = <span className="dividing-line"></span>;
 
-const navLink = (url: string, func: React.MouseEventHandler<HTMLAnchorElement>, text: string) => {
-  return (<NavLink to={url} style={navLinkStyles} onClick={func}>{text}</NavLink>)
-}
+const navLink = (url: string, func: React.MouseEventHandler<HTMLAnchorElement>, text: string) => (
+  <NavLink to={url} style={navLinkStyles} onClick={func}>{text}</NavLink>
+)
 
-function Overlay({ showOverlay }: OverlayProps) {
+export default function Overlay({ showOverlay }: OverlayProps) {
   return (
     <div className="overlay flex-col">
       {navLink('/aptist', showOverlay, 'aptist')}
@@ -32,5 +33,3 @@ function Overlay({ showOverlay }: OverlayProps) {
     </div>
   )
 }
-
-export default Overlay;

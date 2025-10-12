@@ -9,7 +9,7 @@ export interface AboutData {
 export const about: AboutData[] = [
   {
     artist: 'aptist',
-    text: `My solo project which merges electronic music with organic elements like guitar and bass,
+    text: `My current solo project which merges electronic music with organic elements like guitar and bass,
     as well as atypical features such as odd time signatures.`,
     text2: `When writing a song, I often start with the drums or a guitar riff and then build up the idea
     from there. Recently, I’ve been trying to finish as much of a song as possible without adding bass
@@ -40,7 +40,7 @@ export const about: AboutData[] = [
   {
     artist: 'Shamisen',
     text: `I play a Japanese instrument called the shamisen, which is a three-stringed instrument similar
-    in sound to a banjo. I enjoy it as it is a way of playing/listening to non-western music, as Japanese music
+    in sound to a banjo. I enjoy it as it is a way of playing and listening to non-western music, as Japanese music
     can be very different.`,
     text2: `It's used more and more in modern J-rock and J-pop as it has a loud and distinct sound. Recently, I have
     tried to incorporate it into my aptist songs, as I've not heard it used in an electronic context before.`

@@ -10,7 +10,7 @@ interface AlbumArtProps {
   release: ReleaseData
 }
 
-export default function AlbumArt({ releaseImg, releaseAlt, data, tracklistLength, release }: AlbumArtProps) {
+export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, release }: AlbumArtProps) {
   const [ isCollapsed, setIsCollapsed ] = useState<boolean>(false);
   const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
   const toggleSquares = () => { setIsCollapsed(prevIsCollapsed => !prevIsCollapsed) };
@@ -21,18 +21,18 @@ export default function AlbumArt({ releaseImg, releaseAlt, data, tracklistLength
   });
 
   const silverCircle = <span className={isCollapsed ? "cd-circle" : "cd-circle hidden"}></span>;
-    const goldCircle =
-      <span className={discClasses} onClick={showTracklist}>
-        <div className="tracklist">
-          <div className="tracklist-inner">
-            <ol>
-            {release.tracklist.map((song: string, idx: number) => (
-              <li><p key={idx} className="song-title">{song}</p></li>
-            ))}
-            </ol>
-          </div>
-        </div>
-      </span>;
+  const goldCircle =
+  <span className={discClasses} onClick={showTracklist}>
+    <div className="tracklist">
+      <div className="tracklist-inner">
+        <ol>
+        {release.tracklist.map((song: string, idx: number) => (
+          <li><p key={idx} className="song-title">{song}</p></li>
+        ))}
+        </ol>
+      </div>
+    </div>
+  </span>;
 
   return (
     <div className="album-artwork">

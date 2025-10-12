@@ -8,7 +8,6 @@ export interface HeaderProps {
 
 
 function Header({ showOverlay, isRotated }: HeaderProps) {
-
   return (
     <div className="header">
       <NavLink to="/aptist">

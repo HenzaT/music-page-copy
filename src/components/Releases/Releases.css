@@ -4,7 +4,10 @@
 
 .releases-cards > h1 {
   text-align: center;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .release-text {
@@ -22,6 +25,7 @@
 
 .card > h2 {
   padding-top: 20px;
+  font-size: 1.8rem;
 }
 
 .card > img {
@@ -37,6 +41,26 @@
 
 .album-artwork {
   position: relative;
+}
+
+.hide-show-all-button {
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 6px var(--black);
+  border: none;
+  background: inherit;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hide-show-all-button:hover { transform: var(--hover-up) }
+
+.fa-compact-disc {
+  font-size: 2.5rem;
 }
 
 /* newest release image styling */

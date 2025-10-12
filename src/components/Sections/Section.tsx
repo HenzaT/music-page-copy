@@ -5,7 +5,7 @@ import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
 import { aptistReleases } from '../../data/discographyData';
 import type { ReleaseData } from '../../data/discographyData';
-import AudioPlayer from 'react-h5-audio-player';
+// import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css'
 
 interface SectionProps {
@@ -35,11 +35,11 @@ export default function Section({ artistName, sectionClassName, aboutDataIndex, 
         {newestAptistImage('main')}
       </div>
       {newestAptistRelease?.title}. <br />Stream it now.
-      <AudioPlayer
+      {/* <AudioPlayer
         src='https://soundcloud.com/aptist1/into-skies-master-5-8-25-2'
         volume={0.5}
         showJumpControls={false}
-      />
+      /> */}
     </h1>
 
   return (
@@ -48,7 +48,9 @@ export default function Section({ artistName, sectionClassName, aboutDataIndex, 
         {artistReleases === aptistReleases && newestAptistRelease &&
           newestAptistReleaseName
         }
-        <h1 className={`main-header ${artistName}-h1`}>{artistName}</h1>
+        <div className="main-header-center-align">
+          <h1 className={`main-header ${artistName}-h1`}>{artistName}</h1>
+        </div>
       </div>
       <About
         data={about}
