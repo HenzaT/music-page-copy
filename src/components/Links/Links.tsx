@@ -1,7 +1,6 @@
 import type { LinkData } from '../../data/linksData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classNames from 'classnames';
-import { useLocation } from 'react-router-dom';
+import { ArtistShadowClasses } from '../ReactClassNames/ArtistShadowClasses';
 import { faSpotify, faItunes, faBandcamp, faTidal, faDeezer, type IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
 interface LinkProps {
@@ -10,15 +9,10 @@ interface LinkProps {
 }
 
 export default function Links({ data, index }: LinkProps) {
-  const { pathname } = useLocation();
-  const linkClasses = classNames('link-circle', {
-    'aptist-shadow': pathname === '/aptist',
-    'ppf-shadow': pathname === '/paulo-post-future',
-    'lm-shadow': pathname === '/little-moon'
-  });
+  const linkClass = ArtistShadowClasses('link-circle');
 
   const artistLinkIcon = (icon: IconDefinition, data: LinkData[], index: number, service: string) => (
-    <div className={linkClasses}>
+    <div className={linkClass}>
       <a href={data[index][service]} target="_blank"><FontAwesomeIcon icon={icon}/></a>
     </div>
   );

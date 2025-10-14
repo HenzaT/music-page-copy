@@ -6,7 +6,6 @@ export interface HeaderProps {
   isRotated: boolean
 }
 
-
 function Header({ showOverlay, isRotated }: HeaderProps) {
   return (
     <div className="header">

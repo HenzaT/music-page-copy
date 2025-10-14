@@ -1,9 +1,8 @@
 import AlbumArt from './AlbumArt';
-import { useLocation } from 'react-router';
+import { ArtistShadowClasses } from '../ReactClassNames/ArtistShadowClasses';
 import type { ReleaseData } from '../../data/discographyData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
-import classNames from 'classnames';
 import { useMediaQuery } from 'react-responsive';
 
 interface ReleasesProps {
@@ -11,15 +10,9 @@ interface ReleasesProps {
 }
 
 export default function Releases({ data }: ReleasesProps ) {
-  const { pathname } = useLocation();
-  const buttonClass = classNames('hide-show-all-button', {
-    'aptist-shadow': pathname === '/aptist',
-    'ppf-shadow': pathname === '/paulo-post-future',
-    'lm-shadow': pathname === '/little-moon'
-  });
-
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
+  const hideShowAllButtonClass = ArtistShadowClasses('hide-show-all-button');
 
   return (
     <>
@@ -27,7 +20,7 @@ export default function Releases({ data }: ReleasesProps ) {
         {isTabletAndBiggerScreen &&
         <div className="large-screen-releases-header flex-col">
           <h1>Releases</h1>
-          <button type="button" className={buttonClass}>
+          <button type="button" className={hideShowAllButtonClass}>
             <FontAwesomeIcon icon={faCompactDisc} />
           </button>
         </div>
@@ -51,7 +44,7 @@ export default function Releases({ data }: ReleasesProps ) {
         ))}
       </div>
       {isMobileScreen &&
-      <button type="button" className={buttonClass}>
+      <button type="button" className={hideShowAllButtonClass}>
         <FontAwesomeIcon icon={faCompactDisc} />
       </button>}
     </>

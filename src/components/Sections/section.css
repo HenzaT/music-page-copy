@@ -31,6 +31,7 @@
 
 .aptist-section {
   background: var(--yellow);
+  color: var(--black);
 }
 .ppf-section {
   background: var(--orange);
@@ -57,6 +58,18 @@
 
 .shamisen-h1 {
   font-size: 4.5rem;
+}
+
+.new-release-links {
+  gap: 10px;
+}
+
+.new-release-links > a {
+  color: inherit;
+  transition: transform 0.5s ease-in-out;
+}
+.new-release-links > a:hover {
+  transform: translateX(10px);
 }
 
 /* Medium devices (tablets) */

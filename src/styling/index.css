@@ -39,10 +39,10 @@ p {
 
 /* variables */
 :root {
-  --black: #221E22;
+  --black: #151415;
   --white: #fceafc;
   /* aptist */
-  --yellow: #d89e39;
+  --yellow: #c58e2e;
   --dark-yellow: #895802;
   /* first swim */
   --blue: #daf3fd;
@@ -66,6 +66,21 @@ p {
   /* hover */
   --hover-up: translateY(-3px);
 }
+
+/* shared shadow states for specific pages */
+.aptist-shadow { box-shadow: 0px 0px 6px var(--dark-yellow); }
+.first-swim-shadow { box-shadow: 0px 0px 6px var(--dark-blue); }
+.ppf-shadow { box-shadow: 0px 0px 6px var(--dark-orange); }
+.lm-shadow { box-shadow: 0px 0px 6px var(--dark-purple); }
+.shamisen-shadow { box-shadow: 0px 0px 6px var(--dark-taupe); }
+
+/* shared color for specific artists */
+.aptist-color { color: var(--black); }
+.first-swim-color { color: var(--blue); }
+.ppf-color { color: var(--white); }
+.lm-color { color: var(--yellow); }
+.shamisen-color { color: var(--dark-taupe); }
+.about-color { color: var(--white); }
 
 /* often used css */
 .flex-col {

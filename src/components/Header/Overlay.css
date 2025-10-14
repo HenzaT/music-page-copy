@@ -1,7 +1,7 @@
 .overlay {
   font-size: 2rem;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(80px);
+  background: rgba(231, 224, 224, 0.082);
+  backdrop-filter: blur(140px);
   gap: 20px;
   position: fixed;
   left: 0;

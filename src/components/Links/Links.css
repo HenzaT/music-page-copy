@@ -21,10 +21,6 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.aptist-shadow { box-shadow: 0px 0px 6px var(--dark-yellow); }
-.ppf-shadow { box-shadow: 0px 0px 6px var(--dark-orange); }
-.lm-shadow { box-shadow: 0px 0px 6px var(--dark-purple); }
-
 .link-circle:hover { transform: var(--hover-up); }
 
 /* Medium devices (tablets) */

@@ -1,21 +1,21 @@
 import { NavLink } from 'react-router-dom';
-
+import { ArtistColorClasses } from '../ReactClassNames/ArtistColorClasses';
 
 interface OverlayProps {
   showOverlay: React.MouseEventHandler<HTMLAnchorElement>
 }
 
+const navLinkClass = ArtistColorClasses;
 const navLinkStyles = ({ isActive }: { isActive: boolean }) => ({
-  color: 'var(--black)',
   textDecoration: isActive ? 'underline' : 'none',
   fontWeight: '700',
   padding: '5px 10px'
 });
 
-const dividingLine = <span className="dividing-line"></span>;
+const dividingLine = <span className={ArtistColorClasses('dividing-line')}></span>;
 
 const navLink = (url: string, func: React.MouseEventHandler<HTMLAnchorElement>, text: string) => (
-  <NavLink to={url} style={navLinkStyles} onClick={func}>{text}</NavLink>
+  <NavLink to={url} className={navLinkClass} style={navLinkStyles} onClick={func}>{text}</NavLink>
 )
 
 export default function Overlay({ showOverlay }: OverlayProps) {
