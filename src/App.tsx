@@ -17,7 +17,6 @@ import { aptistReleases } from './data/discographyData';
 import { ppfReleases } from './data/discographyData';
 import { littleMoonReleases } from './data/discographyData';
 
-
 export default function App() {
   const [ isRotated, setIsRotated ] = useState<boolean>(true);
 

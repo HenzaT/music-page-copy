@@ -5,8 +5,7 @@ import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection';
 import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
 import { aptistReleases, type ReleaseData } from '../../data/discographyData';
-// import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css'
+// import { useScroll, animated } from '@react-spring/web';
 
 interface SectionProps {
   artistName: string,

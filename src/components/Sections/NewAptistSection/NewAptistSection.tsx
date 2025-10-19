@@ -1,6 +1,4 @@
 import { aptistReleases } from '../../../data/discographyData';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const newestAptistRelease = aptistReleases.find(({ released }) => released);
 const newestAptistImage = (description: string) => (
@@ -19,10 +17,12 @@ const newestAptistImage = (description: string) => (
     {newestAptistImage('main')}
   </div>
   <div className="new-release-links flex-row">
-    <h4>{newestAptistRelease?.title}. <br />Stream Now.</h4>
-    <a href="https://distrokid.com/hyperfollow/aptist/into-skies" target="_blank">
-      <FontAwesomeIcon icon={faArrowRight} />
-    </a>
+    <h4>{newestAptistRelease?.title}. <br />
+      Stream it&nbsp;
+      <a href="https://distrokid.com/hyperfollow/aptist/into-skies" className="distrokid-link" target="_blank">
+        here
+      </a>.
+    </h4>
   </div>
   {/* <AudioPlayer
     src='https://soundcloud.com/aptist1/into-skies-master-5-8-25-2'

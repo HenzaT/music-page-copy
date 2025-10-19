@@ -1,8 +1,6 @@
-import { useLocation } from 'react-router';
 import classNames from 'classnames';
 
-export const ArtistShadowClasses = (originalClass: string) => {
-  const { pathname } = useLocation();
+export default function ArtistShadowClasses(originalClass: string, pathname: string) {
   return classNames(originalClass, {
     'aptist-shadow': pathname === '/aptist',
     'ppf-shadow': pathname === '/paulo-post-future',

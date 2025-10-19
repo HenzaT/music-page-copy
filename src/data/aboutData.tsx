@@ -28,14 +28,14 @@ export const about: AboutData[] = [
     and could avoid the typical lead/rhythm guitar divide. The drums were often a focal point in our songs, as
     our drummer was influenced more by electronic music than rock or indie.`,
     text2: `The name came after flicking through a dictionary in a recording studio. We played many gigs together
-    (the biggest artist we supported was Benee, before she went viral in 2020)`
+    (the biggest artist we supported was Benee, before she went viral in 2020).`
   },
   {
     artist: 'Little Moon',
     text: `My first proper band, I learnt a lot about songwriting and how important it is to write songs
     with an audience in mind. I played bass guitar and some guitar.`,
     text2: `We wrote our first song, Charlie, during our first practice together and came up with the band name
-    on the drive back from the practice studio (it was night)`
+    on the drive back from the practice studio (it was night).`
   },
   {
     artist: 'Shamisen',

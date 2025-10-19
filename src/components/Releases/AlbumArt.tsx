@@ -8,17 +8,17 @@ interface AlbumArtProps {
   data: ReleaseData[]
   tracklistLength: number
   release: ReleaseData
+  isCollapsed: boolean
+  setCollapsed: React.HTMLAttributeAnchorTarget
 }
 
-export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, release }: AlbumArtProps) {
-  const [ isCollapsed, setIsCollapsed ] = useState<boolean>(false);
+export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, release, isCollapsed, setCollapsed }: AlbumArtProps) {
   const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
-  const toggleSquares = () => { setIsCollapsed(prevIsCollapsed => !prevIsCollapsed) };
-  const showTracklist = () => { setIsFlipped(prevIsFlipped => !prevIsFlipped); };
   const discClasses = classNames('cd-circle cd-album', {
     'flipped': isFlipped,
     'hidden': !isCollapsed,
   });
+  const showTracklist = () => { setIsFlipped(prevIsFlipped => !prevIsFlipped); };
 
   const silverCircle = <span className={isCollapsed ? "cd-circle" : "cd-circle hidden"}></span>;
   const goldCircle =
@@ -36,7 +36,7 @@ export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, rele
 
   return (
     <div className="album-artwork">
-      <div className="release-img-container" onClick={toggleSquares}>
+      <div className="release-img-container" onClick={() => setCollapsed(prev => !prev)}>
         <span className={isCollapsed ? "faded-square-3 collapsed" : "faded-square-3"}></span>
         <span className={isCollapsed ? "faded-square-2 collapsed" : "faded-square-2"}></span>
         <span className={isCollapsed ? "faded-square-1 collapsed" : "faded-square-1"}></span>

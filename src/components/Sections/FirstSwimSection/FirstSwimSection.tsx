@@ -14,7 +14,7 @@ export default function FirstSwimSection() {
         data={about}
         index={1}
       />
-      <div className="releases-cards">
+      <div className="releases-cards fs flex-col">
         <h1>Releases</h1>
         <div className="release-text flex-col">
           <p>Coming Soon.</p>

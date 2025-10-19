@@ -15,12 +15,13 @@ export const aptistReleases: ReleaseData[] = [
     img: './src/assets/aptist/dream-state.jpg',
     alt: 'Dream State Album Artwork',
     tracklist: [
+      'Intro',
       'Main Sequence',
       'Dream State',
       'Into Skies',
-      'Invisible',
       "What's The Night For?",
       'Horizon',
+      'Invisible',
       'Revolutions',
       'Later',
       'Some Days',
@@ -44,6 +45,25 @@ export const aptistReleases: ReleaseData[] = [
     alt: 'Revolutions Artwork',
     tracklist: [
       'Revolutions'
+    ],
+    released: false
+  },
+  {
+    title: 'Invisible',
+    img: './src/assets/aptist/I.jpg',
+    alt: 'Invisible Artwork',
+    tracklist: [
+      'Invisible',
+      'Main Sequence II'
+    ],
+    released: false
+  },
+  {
+    title: 'Main Sequence',
+    img: './src/assets/aptist/I.jpg',
+    alt: 'Main Sequence Artwork',
+    tracklist: [
+      'Main Sequence'
     ],
     released: false
   },

@@ -8,7 +8,7 @@ export interface HeaderProps {
 
 function Header({ showOverlay, isRotated }: HeaderProps) {
   return (
-    <div className="header">
+    <nav>
       <NavLink to="/aptist">
         <button className="nav-icon-button" type="button">
           <img src="./src/assets/images/synth.png" alt="png image of synth" className="nav-icon" />
@@ -21,7 +21,7 @@ function Header({ showOverlay, isRotated }: HeaderProps) {
         className={!isRotated ? "nav-button" : "nav-button rotated"}>
           +
       </button>
-    </div>
+    </nav>
   )
 }
 

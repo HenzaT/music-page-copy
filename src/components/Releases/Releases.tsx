@@ -1,18 +1,24 @@
 import AlbumArt from './AlbumArt';
-import { ArtistShadowClasses } from '../ReactClassNames/ArtistShadowClasses';
+import ArtistShadowClasses from "../ReactClassNames/ArtistShadowClasses";
 import type { ReleaseData } from '../../data/discographyData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 import { useMediaQuery } from 'react-responsive';
+import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 interface ReleasesProps {
   data: ReleaseData[]
 }
 
 export default function Releases({ data }: ReleasesProps ) {
+  const [ isCollapsed, setIsCollapsed ] = useState<boolean>(false);
+  const { pathname } = useLocation()
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
-  const hideShowAllButtonClass = ArtistShadowClasses('hide-show-all-button');
+  const hideShowAllButtonClass = ArtistShadowClasses('hide-show-all-button', pathname);
+
+  const toggleSquares = () => { setIsCollapsed(prevIsCollapsed => !prevIsCollapsed) };
 
   return (
     <>
@@ -20,7 +26,7 @@ export default function Releases({ data }: ReleasesProps ) {
         {isTabletAndBiggerScreen &&
         <div className="large-screen-releases-header flex-col">
           <h1>Releases</h1>
-          <button type="button" className={hideShowAllButtonClass}>
+          <button type="button" className={hideShowAllButtonClass} onClick={(toggleSquares)}>
             <FontAwesomeIcon icon={faCompactDisc} />
           </button>
         </div>
@@ -37,6 +43,8 @@ export default function Releases({ data }: ReleasesProps ) {
               data={data}
               tracklistLength={release.tracklist.length}
               release={release}
+              isCollapsed={isCollapsed}
+              setCollapsed={setIsCollapsed}
             />
           </div>
           <h2>{release.title}</h2>
@@ -44,7 +52,7 @@ export default function Releases({ data }: ReleasesProps ) {
         ))}
       </div>
       {isMobileScreen &&
-      <button type="button" className={hideShowAllButtonClass}>
+      <button type="button" className={hideShowAllButtonClass} onClick={(toggleSquares)}>
         <FontAwesomeIcon icon={faCompactDisc} />
       </button>}
     </>
