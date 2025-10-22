@@ -27,7 +27,7 @@ export default function Releases({ data }: ReleasesProps ) {
         <div className="large-screen-releases-header flex-col">
           <h1>Releases</h1>
           <button type="button" className={hideShowAllButtonClass} onClick={(toggleSquares)}>
-            <FontAwesomeIcon icon={faCompactDisc} />
+            <FontAwesomeIcon icon={faCompactDisc}/>
           </button>
         </div>
         }
@@ -44,7 +44,7 @@ export default function Releases({ data }: ReleasesProps ) {
               tracklistLength={release.tracklist.length}
               release={release}
               isCollapsed={isCollapsed}
-              setCollapsed={setIsCollapsed}
+              setCollapsed={() => {setIsCollapsed(prevIsCollapsed => !prevIsCollapsed)}}
             />
           </div>
           <h2>{release.title}</h2>

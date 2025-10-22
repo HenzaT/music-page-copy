@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type Dispatch, type SetStateAction } from 'react';
 import classNames from 'classnames';
 import type { ReleaseData } from '../../data/discographyData'
 
@@ -9,7 +9,7 @@ interface AlbumArtProps {
   tracklistLength: number
   release: ReleaseData
   isCollapsed: boolean
-  setCollapsed: React.HTMLAttributeAnchorTarget
+  setCollapsed: Dispatch<SetStateAction<boolean>>
 }
 
 export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, release, isCollapsed, setCollapsed }: AlbumArtProps) {
@@ -26,8 +26,8 @@ export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, rele
     <div className="tracklist">
       <div className="tracklist-inner">
         <ol>
-        {release.tracklist.map((song: string, idx: number) => (
-          <li><p key={idx} className="song-title">{song}</p></li>
+        {release.tracklist.map((song: string) => (
+          <li><p key={song} className="song-title">{song}</p></li>
         ))}
         </ol>
       </div>
@@ -36,7 +36,7 @@ export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, rele
 
   return (
     <div className="album-artwork">
-      <div className="release-img-container" onClick={() => setCollapsed(prev => !prev)}>
+      <div className="release-img-container" onClick={() => setCollapsed}>
         <span className={isCollapsed ? "faded-square-3 collapsed" : "faded-square-3"}></span>
         <span className={isCollapsed ? "faded-square-2 collapsed" : "faded-square-2"}></span>
         <span className={isCollapsed ? "faded-square-1 collapsed" : "faded-square-1"}></span>

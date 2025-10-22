@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import type { ReleaseData } from './data/discographyData';
+import { animated, useTransition } from 'react-spring';
 
 import Header from './components/Header/Header';
 import Overlay from './components/Header/Overlay';
@@ -32,7 +32,14 @@ export default function App() {
 
   const RouteTransition = () => {
     const location = useLocation();
-    const nodeRef = useRef(null);
+
+
+    const transitions = useTransition(location, {
+      key: (loc: Location) => loc.pathname,
+      from: {opacity: 0, width: '0%'},
+      enter: {opacity: 1, width: '100%'},
+      leave: {opacity: 0, width: '0%'}
+    });
 
     const ArtistSection = (name: string, artistClass: string, sectionClass: string, release: ReleaseData[], aboutIndex: number, linksIndex: number) => (
       <Section
@@ -45,30 +52,26 @@ export default function App() {
       />
     );
 
-    return (
-      <TransitionGroup component={null}>
-        <CSSTransition key={location.pathname} classNames="fade" timeout={500} nodeRef={nodeRef}>
-          <div ref={nodeRef}>
-            <Routes location={location}>
-              <Route path="aptist"
-                element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)}/>
-              <Route path="first-swim"
-                element={<FirstSwimSection />}/>
-              <Route path="shamisen"
-                element={<ShamisenSection />}/>
-              <Route path="paulo-post-future"
-                element={ArtistSection('Paulo Post Future', 'ppf', 'ppf-section', ppfReleases, 2, 1)}/>
-              <Route path="little-moon"
-                element={ArtistSection('Little Moon', 'little-moon', 'little-moon-section', littleMoonReleases, 3, 2)}/>
-              {/* <Route path="contact" element={<ContactForm />} /> */}
-              <Route path="about" element={<AboutSection />} />
-              <Route path="*"
-                element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)}/>
-            </Routes>
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
-    )
+    return transitions((style, item) => (
+      <animated.div style={style}>
+        <Routes location={item}>
+          <Route path="aptist"
+            element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)}/>
+          <Route path="first-swim"
+            element={<FirstSwimSection />}/>
+          <Route path="shamisen"
+            element={<ShamisenSection />}/>
+          <Route path="paulo-post-future"
+            element={ArtistSection('Paulo Post Future', 'ppf', 'ppf-section', ppfReleases, 2, 1)}/>
+          <Route path="little-moon"
+            element={ArtistSection('Little Moon', 'little-moon', 'little-moon-section', littleMoonReleases, 3, 2)}/>
+          {/* <Route path="contact" element={<ContactForm />} /> */}
+          <Route path="about" element={<AboutSection />} />
+          <Route path="*"
+            element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)}/>
+        </Routes>
+      </animated.div>
+    ));
   }
 
   return (
