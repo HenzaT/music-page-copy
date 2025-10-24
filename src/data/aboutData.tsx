@@ -12,9 +12,7 @@ export const about: AboutData[] = [
     text: `My current solo project which merges electronic music with organic elements like guitar and bass,
     as well as atypical features such as odd time signatures.`,
     text2: `When writing a song, I often start with the drums or a guitar riff and then build up the idea
-    from there. Recently, I’ve been trying to finish as much of a song as possible without adding bass
-    until the very end. I’ve found that this approach leads to more interesting melodies as I’m not relying
-    on the bass to create movement.`
+    from there. I try not to worry too much about whether a song is sounding 'electronic' enough.`
   },
   {
     artist: 'First Swim',

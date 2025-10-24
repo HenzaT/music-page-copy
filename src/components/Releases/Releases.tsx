@@ -22,7 +22,7 @@ export default function Releases({ data }: ReleasesProps ) {
 
   return (
     <>
-      <div className="releases-cards">
+      <section className="releases-cards">
         {isTabletAndBiggerScreen &&
         <div className="large-screen-releases-header flex-col">
           <h1>Releases</h1>
@@ -50,7 +50,7 @@ export default function Releases({ data }: ReleasesProps ) {
           <h2>{release.title}</h2>
         </div>
         ))}
-      </div>
+      </section>
       {isMobileScreen &&
       <button type="button" className={hideShowAllButtonClass} onClick={(toggleSquares)}>
         <FontAwesomeIcon icon={faCompactDisc} />

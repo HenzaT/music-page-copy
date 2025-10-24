@@ -20,12 +20,12 @@ export default function Links({ data, index }: LinkProps) {
   );
 
   return (
-    <div className="artist-links">
+    <section className="artist-links">
       {data[index].spotify && artistLinkIcon(faSpotify, data, index, 'spotify')}
       {data[index].apple && artistLinkIcon(faItunes, data, index, 'apple')}
       {data[index].tidal && artistLinkIcon(faTidal, data, index, 'tidal')}
       {data[index].bandcamp && artistLinkIcon(faBandcamp, data, index, 'bandcamp')}
       {data[index].deezer && artistLinkIcon(faDeezer, data, index, 'deezer')}
-    </div>
+    </section>
   )
 }

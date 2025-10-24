@@ -8,10 +8,10 @@ interface AboutProps {
 export default function About(props: AboutProps) {
   const { data, index } = props
   return (
-    <div className="info">
+    <section className="info">
       <p>{data[index].text}</p>
       <br />
       <p>{data[index].text2}</p>
-    </div>
+    </section>
   )
 }

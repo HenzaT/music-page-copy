@@ -1,0 +1,17 @@
+.aptist-release-info {
+  margin-top: 50px;
+}
+
+.aptist-info-img {
+  width: 70%;
+  height: 70%;
+}
+
+.aptist-info-txt {
+  width: 70vw;
+  margin: auto;
+}
+
+.aptist-info-txt > p {
+  text-align: justify;
+}

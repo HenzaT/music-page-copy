@@ -41,7 +41,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Revolutions',
-    img: './src/assets/aptist/I.jpg',
+    img: './src/assets/aptist/Revolutions.jpg',
     alt: 'Revolutions Artwork',
     tracklist: [
       'Revolutions'
@@ -104,6 +104,15 @@ export const aptistReleases: ReleaseData[] = [
       'Balance',
       'Think of June',
       'Gatehouse'
+    ],
+    released: true
+  },
+  {
+    title: 'Reflections',
+    img: './src/assets/aptist/Reflections.png',
+    alt: 'Reflections Artwork',
+    tracklist: [
+      'Reflections'
     ],
     released: true
   }

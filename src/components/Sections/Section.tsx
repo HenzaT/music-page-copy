@@ -2,9 +2,11 @@ import About from '../About/About';
 import Releases from '../Releases/Releases';
 import Links from '../Links/Links';
 import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection';
+import AptistInfo from '../Sections/AptistInfo/AptistInfo';
 import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
 import { aptistReleases, type ReleaseData } from '../../data/discographyData';
+import { aptistSongData } from '../../data/aptistSongData';
 // import { useScroll, animated } from '@react-spring/web';
 
 interface SectionProps {
@@ -18,7 +20,7 @@ interface SectionProps {
 
 export default function Section({ artistName, artistClassName, sectionClassName, aboutDataIndex, linksDataIndex, artistDiscog }: SectionProps) {
   return (
-    <div className={sectionClassName}>
+    <section className={sectionClassName}>
       <div className="banner">
         {artistDiscog === aptistReleases && <NewAptistSection />}
         <div className="main-header-center-align">
@@ -29,6 +31,11 @@ export default function Section({ artistName, artistClassName, sectionClassName,
         data={about}
         index={aboutDataIndex}
       />
+      {artistDiscog === aptistReleases &&
+      <AptistInfo
+        songData={aptistSongData}
+        aptistDiscog={aptistReleases}
+      />}
       <Releases
         data={artistDiscog}
       />
@@ -36,6 +43,6 @@ export default function Section({ artistName, artistClassName, sectionClassName,
         data={links}
         index={linksDataIndex}
       />
-    </div>
+    </section>
   )
 }
