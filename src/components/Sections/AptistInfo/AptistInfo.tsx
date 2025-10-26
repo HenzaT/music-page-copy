@@ -29,16 +29,16 @@ export default function AptistInfo({ songData, aptistDiscog }: AptistInfoProps) 
   )
 
   return (
-    <section className="aptist-release-info">
-      {aptistDiscog.map((release) => (songData.map((song) => {
-        if (release.title === song.title && release.released) {
-          return (
-            isMobileScreen
-            ? InfoElement('flex-col', release.img, release.alt, song.title, song.link, song.info)
-            : InfoElement('flex-row', release.img, release.alt, song.title, song.link, song.info)
-          )
-        }
-      })
-    ))}
+  <section className="aptist-release-info">
+    {aptistDiscog.map((release) => (songData.map((song) => {
+      if (release.title === song.title && release.released) {
+        return (
+          isMobileScreen
+          ? InfoElement('flex-col', release.img, release.alt, song.title, song.link, song.info)
+          : InfoElement('flex-row', release.img, release.alt, song.title, song.link, song.info)
+        )
+      }
+    })
+  ))}
   </section>
 )};

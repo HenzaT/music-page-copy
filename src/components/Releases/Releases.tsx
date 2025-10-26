@@ -19,7 +19,7 @@ export default function Releases({ data }: ReleasesProps ) {
   const hideShowAllButtonClass = ArtistShadowClasses('hide-show-all-button', pathname);
 
   const toggleSquares = () => {
-    setSharedIsCollapsed(prevIsCollapsed => !prevIsCollapsed)
+    setSharedIsCollapsed(prevIsCollapsed => !prevIsCollapsed);
   };
 
   return (
@@ -46,7 +46,6 @@ export default function Releases({ data }: ReleasesProps ) {
               tracklistLength={release.tracklist.length}
               release={release}
               sharedState={sharedIsCollapsed}
-              isCollapsed={false}
             />
           </div>
           <h2>{release.title}</h2>
