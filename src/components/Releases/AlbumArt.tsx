@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from 'react';
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import type { ReleaseData } from '../../data/discographyData'
 
@@ -8,19 +8,24 @@ interface AlbumArtProps {
   data: ReleaseData[]
   tracklistLength: number
   release: ReleaseData
-  isCollapsed: boolean
-  setCollapsed: Dispatch<SetStateAction<boolean>>
+  // sharedCollapseState
+  sharedState: boolean
 }
 
-export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, release, isCollapsed, setCollapsed }: AlbumArtProps) {
+export default function AlbumArt(props: AlbumArtProps) {
+  const { releaseImg, releaseAlt, tracklistLength, release, sharedState } = props;
   const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
+  const [ isToggled, setIsToggled ] = useState<boolean>(false);
   const discClasses = classNames('cd-circle cd-album', {
     'flipped': isFlipped,
-    'hidden': !isCollapsed,
+    'hidden': !isToggled,
   });
-  const showTracklist = () => { setIsFlipped(prevIsFlipped => !prevIsFlipped); };
+  const showTracklist = () => { setIsFlipped(prevIsFlipped => !prevIsFlipped) };
+  useEffect(() => {
+    setIsToggled(sharedState)
+  }, [sharedState]);
 
-  const silverCircle = <span className={isCollapsed ? "cd-circle" : "cd-circle hidden"}></span>;
+  const silverCircle = <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>;
   const goldCircle =
   <span className={discClasses} onClick={showTracklist}>
     <div className="tracklist">
@@ -36,11 +41,11 @@ export default function AlbumArt({ releaseImg, releaseAlt, tracklistLength, rele
 
   return (
     <div className="album-artwork">
-      <div className="release-img-container" onClick={() => setCollapsed}>
-        <span className={isCollapsed ? "faded-square-3 collapsed" : "faded-square-3"}></span>
-        <span className={isCollapsed ? "faded-square-2 collapsed" : "faded-square-2"}></span>
-        <span className={isCollapsed ? "faded-square-1 collapsed" : "faded-square-1"}></span>
-        <img src={releaseImg} alt={releaseAlt} className={isCollapsed ? "artwork shadow" : "artwork"} loading="lazy" />
+      <div className="release-img-container" onClick={() => {setIsToggled(prev => !prev)}}>
+        <span className={sharedState ? "faded-square-3 collapsed" : "faded-square-3"}></span>
+        <span className={sharedState ? "faded-square-2 collapsed" : "faded-square-2"}></span>
+        <span className={sharedState ? "faded-square-1 collapsed" : "faded-square-1"}></span>
+        <img src={releaseImg} alt={releaseAlt} className={sharedState ? "artwork shadow" : "artwork"} loading="lazy" />
       </div>
       {tracklistLength > 1 ? goldCircle : silverCircle}
     </div>

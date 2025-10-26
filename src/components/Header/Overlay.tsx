@@ -17,10 +17,10 @@ export default function Overlay({ showOverlay }: OverlayProps) {
     <NavLink to={url} className={ArtistColorClasses('nav-link', pathname)} style={navLinkStyles} onClick={func}>{text}</NavLink>
   )
   const dividingLine = <span className={ArtistColorClasses('dividing-line', pathname)}></span>;
-  
+
   return (
     <div className="overlay flex-col">
-      {navLink('/aptist', showOverlay, 'aptist')}
+      {navLink('/', showOverlay, 'aptist')}
       {navLink('/first-swim', showOverlay, 'First Swim')}
       {navLink('/shamisen', showOverlay, 'Shamisen')}
       {dividingLine}

@@ -1,10 +1,12 @@
 .aptist-release-info {
   margin-top: 50px;
+  border: 1px solid black;
 }
 
 .aptist-info-img {
   width: 70%;
   height: 70%;
+  box-shadow: var(--shadow-offset);
 }
 
 .aptist-info-txt {
@@ -12,6 +14,42 @@
   margin: auto;
 }
 
+.title-link {
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.title-link > a {
+  color: var(--black);
+  cursor: pointer;
+}
+
 .aptist-info-txt > p {
   text-align: justify;
+}
+
+.info-element {
+  gap: 20px;
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .aptist-info-img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .aptist-release-info {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .aptist-info-txt {
+    width: 50%;
+  }
+
+  .info-element {
+    gap: 0;
+  }
 }

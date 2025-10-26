@@ -12,13 +12,15 @@ interface ReleasesProps {
 }
 
 export default function Releases({ data }: ReleasesProps ) {
-  const [ isCollapsed, setIsCollapsed ] = useState<boolean>(false);
+  const [ sharedIsCollapsed, setSharedIsCollapsed ] = useState<boolean>(false);
   const { pathname } = useLocation()
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
   const hideShowAllButtonClass = ArtistShadowClasses('hide-show-all-button', pathname);
 
-  const toggleSquares = () => { setIsCollapsed(prevIsCollapsed => !prevIsCollapsed) };
+  const toggleSquares = () => {
+    setSharedIsCollapsed(prevIsCollapsed => !prevIsCollapsed)
+  };
 
   return (
     <>
@@ -43,8 +45,8 @@ export default function Releases({ data }: ReleasesProps ) {
               data={data}
               tracklistLength={release.tracklist.length}
               release={release}
-              isCollapsed={isCollapsed}
-              setCollapsed={() => {setIsCollapsed(prevIsCollapsed => !prevIsCollapsed)}}
+              sharedState={sharedIsCollapsed}
+              isCollapsed={false}
             />
           </div>
           <h2>{release.title}</h2>
