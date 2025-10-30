@@ -50,16 +50,7 @@ p {
   --dark-yellow: #895802;
   /* first swim */
   --blue: #daf3fd;
-  --dark-blue: #3b8dae;
-  /* paulo post future */
-  --orange: #b53308;
-  --dark-orange: #7d2305;
-  /* little moon */
-  --purple: #44355B;
-  --dark-purple: #31263E;
-  /* shamisen */
-  --taupe: #dfbfbf;
-  --dark-taupe: #672e2e;
+  --dark-blue: #13698b;
 
   /* shadow */
   --shadow-offset: 7px 7px 17px var(--black);
@@ -74,16 +65,10 @@ p {
 /* shared shadow states for specific pages */
 .aptist-shadow { box-shadow: 0px 0px 6px var(--dark-yellow); }
 .first-swim-shadow { box-shadow: 0px 0px 6px var(--dark-blue); }
-.ppf-shadow { box-shadow: 0px 0px 6px var(--dark-orange); }
-.lm-shadow { box-shadow: 0px 0px 6px var(--dark-purple); }
-.shamisen-shadow { box-shadow: 0px 0px 6px var(--dark-taupe); }
 
 /* shared color for specific artists */
 .aptist-color { color: var(--black); }
 .first-swim-color { color: var(--blue); }
-.ppf-color { color: var(--white); }
-.lm-color { color: var(--yellow); }
-.shamisen-color { color: var(--dark-taupe); }
 .about-color { color: var(--white); }
 
 /* often used css */

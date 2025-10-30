@@ -37,32 +37,16 @@
   background: var(--yellow);
   color: var(--black);
 }
-.ppf-section {
-  background: var(--orange);
-  color: var(--white);
-}
-.little-moon-section {
-  background: var(--purple);
-  color: var(--yellow);
-}
 .first-swim-section {
   background: var(--dark-blue);
   color: var(--blue);
   padding-bottom: 30px;
-}
-.shamisen-section {
-  background: var(--taupe);
-  color: var(--dark-taupe);
-  padding-bottom: 40px;
 }
 
 .fs-release {
   margin-bottom: 20px;
 }
 
-.shamisen-h1 {
-  font-size: 4.5rem;
-}
 
 .new-release-links {
   gap: 10px;
@@ -106,8 +90,5 @@
   }
   .aptist-h1 {
     margin-top: 50px;
-  }
-  .ppf-h1 {
-    font-size: 7rem;
   }
 }

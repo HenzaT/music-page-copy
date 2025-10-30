@@ -1,12 +1,7 @@
 // import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 
-export interface HeaderProps {
-  showOverlay: React.MouseEventHandler<HTMLButtonElement>,
-  isRotated: boolean
-}
-
-function Header({ showOverlay, isRotated }: HeaderProps) {
+function Header() {
   return (
     <nav>
       <NavLink to="/aptist">
@@ -15,12 +10,6 @@ function Header({ showOverlay, isRotated }: HeaderProps) {
         </button>
       </NavLink>
       <a href="#top" className="back-to-top"></a>
-      <button
-        type="button"
-        onClick={showOverlay}
-        className={!isRotated ? "nav-button" : "nav-button rotated"}>
-          +
-      </button>
     </nav>
   )
 }

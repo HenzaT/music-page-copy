@@ -3,7 +3,7 @@
   text-align: justify;
   margin: auto;
   overflow-wrap: break-word;
-  background: var(--black);
+  background: var(--dark-blue);
   color: var(--white);
 }
 
@@ -25,13 +25,13 @@
 }
 
 .weblink {
-  color: var(--yellow);
+  color: var(--white);
   font-size: 2rem;
   transition: color 0.3s ease-in-out;
 }
 
 .weblink:hover {
-  color: var(--dark-blue);
+  color: var(--blue);
 }
 
 /* Medium devices (tablets) */
