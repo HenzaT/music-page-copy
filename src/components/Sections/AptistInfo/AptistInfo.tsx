@@ -24,6 +24,7 @@ export default function AptistInfo({ songData, aptistDiscog }: AptistInfoProps) 
           <a href={link}><FontAwesomeIcon icon={faLink}/></a>
         </span>
         <p>{info}</p>
+        <p>Hello</p>
       </div>
     </div>
   )
