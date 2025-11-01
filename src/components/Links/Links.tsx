@@ -1,4 +1,5 @@
 import type { LinkData } from '../../data/linksData';
+import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify, faItunes, faBandcamp, faTidal, faDeezer, faSoundcloud, type IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
@@ -8,6 +9,7 @@ interface LinkProps {
 }
 
 export default function Links({ data, index }: LinkProps) {
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
 
   const artistLinkIcon = (icon: IconDefinition, data: LinkData[], index: number, service: string) => (
     <div className='link-circle'>
@@ -16,7 +18,11 @@ export default function Links({ data, index }: LinkProps) {
   );
 
   return (
-    <section className="artist-links" id="links">
+    <section
+      ref={ref}
+      className={inView ? "artist-links move-up" : "artist-links off-screen"}
+      id="links"
+    >
       <div className="links-top flex-row">
         {data[index].spotify && artistLinkIcon(faSpotify, data, index, 'spotify')}
         {data[index].apple && artistLinkIcon(faItunes, data, index, 'apple')}

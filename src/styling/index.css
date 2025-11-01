@@ -8,6 +8,7 @@
 @import url('../components/Sections/section.css');
 @import url('../components/ContactForm/ContactForm.css');
 @import url('../components/Sections/AboutSection/AboutSection.css');
+@import url('../styling/ScrollAnimations.css');
 
 * {
   margin: 0;

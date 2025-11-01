@@ -3,6 +3,7 @@
   text-align: justify;
   margin: auto;
   overflow-wrap: break-word;
+  transition: all 0.4s ease-in-out;
 }
 
 /* Medium devices (tablets) */

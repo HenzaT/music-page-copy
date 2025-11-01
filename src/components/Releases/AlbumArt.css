@@ -45,6 +45,10 @@
   transform: translate(0, 0);
 }
 
+#newest:hover span {
+  transform: translate(0, 0);
+}
+
 .artwork {
   height: 250px;
   width: 250px;

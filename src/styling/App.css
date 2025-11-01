@@ -1,5 +1,5 @@
 /* react-h5-audio-player styles */
-.rhap_container {
+/* .rhap_container {
   width: 60%;
   background: var(--yellow);
   border: none;
@@ -29,7 +29,7 @@
 }
 .rhap_progress-filled {
   background-color: var(--dark-yellow);
-}
+} */
 
 /* route transitions */
 /* .fade-enter {

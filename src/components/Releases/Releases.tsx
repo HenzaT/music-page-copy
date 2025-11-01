@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
+import { useInView } from "react-intersection-observer";
 
 interface ReleasesProps {
   data: ReleaseData[]
 }
 
 export default function Releases({ data }: ReleasesProps ) {
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
   const [ sharedIsCollapsed, setSharedIsCollapsed ] = useState<boolean>(false);
   const [ isClicked, setIsClicked ] = useState<boolean>(false);
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
@@ -28,7 +30,10 @@ export default function Releases({ data }: ReleasesProps ) {
 
   return (
     <>
-      <section className="releases-cards">
+      <section
+        ref={ref}
+        className={inView ? "releases-cards move-up" : "releases-cards off-screen"}
+      >
         {isTabletAndBiggerScreen &&
         <div className="large-screen-releases-header flex-col">
           <h1>Releases</h1>

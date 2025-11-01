@@ -10,7 +10,7 @@ const newestAptistImage = (description: string) => (
 
 const newestAptistReleaseName =
   <section className="new-release-text flex-col">
-    <div className="new-release-img-container">
+    <div className="new-release-img-container" id="newest">
       <span className="faded-square-3"></span>
       <span className="faded-square-2"></span>
       <span className="faded-square-1"></span>
