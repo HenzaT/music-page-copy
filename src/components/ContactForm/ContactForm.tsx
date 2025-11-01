@@ -4,19 +4,13 @@ import { useForm } from 'react-hook-form';
 
 export default function ContactForm() {
   const form: React.RefObject<HTMLFormElement> = useRef(null);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = () => {
-    emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, {
-        publicKey: 'sWhLa9wWGJbXmPfQ8',
-      })
+    emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8', })
       .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (err) => {
-          console.log('FAILED...', err);
-        },
+        () => { console.log('SUCCESS!'); },
+        (err) => { console.log('FAILED...', err); },
       );
   };
 
@@ -26,23 +20,43 @@ export default function ContactForm() {
         <div className="info contact-text">
           <p>If you'd like to ask me something, contact me regarding a release or just have a chat about music in general, please contact me here:</p>
           <form ref={form} onSubmit={handleSubmit(onSubmit)} className="flex-col">
-            <label>name</label>
-            <input
-              {...register('name', {
-                required: true
-              })}
-              type="text"
-              name="user_name" />
-            <label>email</label>
-            <input
-              {...register('email', {
-                required: true,
-                pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-              })}
-              type="email"
-              name="user_email" />
-            <label>message</label>
-            <textarea name="message" />
+            <label className='flex-col'>name
+              <input
+                {...register('name', {
+                  required: 'name is required',
+                  minLength: {
+                    value: 2,
+                    message: 'please provide a name'
+                  }
+                })}
+                type="text"
+                name="name" />
+                {errors.username && (
+                  <span className="error-message">
+                      {errors.username.message}
+                  </span>
+                )}
+            </label>
+            <label className='flex-col'>email
+              <input
+                {...register('email', {
+                  required: true,
+                  pattern: {
+                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                    message: 'email is invalid'
+                  }
+                })}
+                type="email"
+                name="email" />
+                {errors.email && (
+                  <span className="error-message">
+                    {errors.email.message}
+                  </span>
+                )}
+            </label>
+            <label className='flex-col'>message
+              <textarea name="message" />
+            </label>
             <input
               {...register('message', {
                 required: true

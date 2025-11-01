@@ -3,7 +3,7 @@ export default function About() {
     <section className="about flex-col">
       <div className="about-text-paragraphs banner">
         <p>
-          I also play bass in a band called First Swim, as well as a Japanese instrument called a shamisen.
+          I also play bass in a band called First Swim, as well as a Japanese instrument called the shamisen.
         </p>
         <p>
           Aside from music, I like to code and work on projects (like building this website), and I am also a keen climber.

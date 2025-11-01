@@ -11,12 +11,20 @@ interface ReleasesProps {
 
 export default function Releases({ data }: ReleasesProps ) {
   const [ sharedIsCollapsed, setSharedIsCollapsed ] = useState<boolean>(false);
+  const [ isClicked, setIsClicked ] = useState<boolean>(false);
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
 
   const toggleSquares = () => {
     setSharedIsCollapsed(prevIsCollapsed => !prevIsCollapsed);
+    setIsClicked(prevIsClicked => !prevIsClicked);
   };
+
+  const showAllButton = () => (
+    <button type="button" className='show-all' onClick={(toggleSquares)}>
+      <FontAwesomeIcon icon={faCompactDisc} className={isClicked ? 'rotated' : 'disc-icon'}/>
+    </button>
+  )
 
   return (
     <>
@@ -24,9 +32,7 @@ export default function Releases({ data }: ReleasesProps ) {
         {isTabletAndBiggerScreen &&
         <div className="large-screen-releases-header flex-col">
           <h1>Releases</h1>
-          <button type="button" className='show-all' onClick={(toggleSquares)}>
-            <FontAwesomeIcon icon={faCompactDisc}/>
-          </button>
+          {showAllButton()}
         </div>
         }
         {isMobileScreen &&
@@ -48,10 +54,7 @@ export default function Releases({ data }: ReleasesProps ) {
         </div>
         ))}
       </section>
-      {isMobileScreen &&
-      <button type="button" className='show-all' onClick={(toggleSquares)}>
-        <FontAwesomeIcon icon={faCompactDisc} />
-      </button>}
+      {isMobileScreen && showAllButton()}
     </>
   )
 }

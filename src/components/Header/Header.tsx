@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 function Header() {
   const { pathname } = useLocation();
-  const navColorMatchClass = classNames('navlink', {
+  const navColorMatchClass = classNames('navlink navlink-ltr', {
     'aptist-color': pathname === '/aptist' || pathname === '/',
     'about-color': pathname === '/about',
     'contact-color': pathname === '/contact'

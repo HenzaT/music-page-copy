@@ -14,9 +14,15 @@ nav {
   z-index: 9999;
 }
 
-.aptist-color {color: var(--black);}
-.about-color {color: var(--white);}
-.contact-color {color: var(--dark-taupe);}
+.aptist-color {
+  color: var(--black);
+}
+.about-color {
+  color: var(--white);
+}
+.contact-color {
+  color: var(--dark-taupe);
+}
 
 .back-to-top {
   width: 100%;
@@ -51,9 +57,9 @@ nav {
   transition: transform 0.3s ease-in-out;
 }
 
-.rotated {
+/* .rotated {
   transform: rotate(45deg);
-}
+} */
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {

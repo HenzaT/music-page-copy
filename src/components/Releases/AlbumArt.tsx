@@ -35,9 +35,8 @@ export default function AlbumArt(props: AlbumArtProps) {
   }, [sharedState]);
 
 
-  const silverCircle =
+  const silverCircle = <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>
 
-    <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>
   const goldCircle =
     <span className={discClasses} onClick={showTracklist}>
       <div className="tracklist">
