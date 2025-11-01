@@ -4,3 +4,24 @@
   margin: auto;
   overflow-wrap: break-word;
 }
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+ .info {
+  width: 60vw;
+ }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+ .info {
+  width: 60vw;
+ }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+ .info {
+  width: 40vw;
+ }
+}

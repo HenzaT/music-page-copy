@@ -2,11 +2,11 @@ import About from '../About/About';
 import Releases from '../Releases/Releases';
 import Links from '../Links/Links';
 import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection';
-import AptistInfo from '../Sections/AptistInfo/AptistInfo';
+// import AptistInfo from '../Sections/AptistInfo/AptistInfo';
 import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
 import { aptistReleases, type ReleaseData } from '../../data/discographyData';
-import { aptistSongData } from '../../data/aptistSongData';
+// import { aptistSongData } from '../../data/aptistSongData';
 // import { useScroll, animated } from '@react-spring/web';
 
 interface SectionProps {
@@ -23,7 +23,7 @@ export default function Section({ artistName, artistClassName, sectionClassName,
     <section className={sectionClassName}>
       <div className="banner">
         {artistDiscog === aptistReleases && <NewAptistSection />}
-        <div className="main-header-center-align">
+        <div className="main-header center-align">
           <h1 className={`main-header ${artistClassName}-h1`}>{artistName}</h1>
         </div>
       </div>
@@ -31,11 +31,11 @@ export default function Section({ artistName, artistClassName, sectionClassName,
         data={about}
         index={aboutDataIndex}
       />
-      {artistDiscog === aptistReleases &&
+      {/* {artistDiscog === aptistReleases &&
       <AptistInfo
         songData={aptistSongData}
         aptistDiscog={aptistReleases}
-      />}
+      />} */}
       <Releases
         data={artistDiscog}
       />

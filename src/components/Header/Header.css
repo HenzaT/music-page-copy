@@ -1,7 +1,7 @@
 nav {
   position: fixed;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(80px);
   border-radius: var(--b-radius);
   width: 90%;
   height: 6vh;
@@ -13,6 +13,10 @@ nav {
   align-items: center;
   z-index: 9999;
 }
+
+.aptist-color {color: var(--black);}
+.about-color {color: var(--white);}
+.contact-color {color: var(--dark-taupe);}
 
 .back-to-top {
   width: 100%;
@@ -30,8 +34,15 @@ nav {
 }
 
 .nav-icon-button {
-  margin-left: 30px;
-  font-size: 3rem;
+  font-size: 1.3rem;
+}
+
+.nav-icon-button.left {
+  margin-left: 20px;
+}
+
+.nav-icon-button.right {
+  margin-right: 20px;
 }
 
 .nav-button {

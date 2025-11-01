@@ -2,12 +2,11 @@
 @import url('../components/Sections/AptistInfo/AptistInfo.css');
 @import url('../components/Canvas/canvas.css');
 @import url('../components/Header/Header.css');
-@import url('../components/Header/Overlay.css');
 @import url('../components/Links/Links.css');
 @import url('../components/Releases/AlbumArt.css');
 @import url('../components/Releases/Releases.css');
 @import url('../components/Sections/section.css');
-@import url('../components/Sections/ContactForm/ContactForm.css');
+@import url('../components/ContactForm/ContactForm.css');
 @import url('../components/Sections/AboutSection/AboutSection.css');
 
 * {
@@ -45,12 +44,16 @@ p {
   --black: #151415;
   --white: #fceafc;
   /* aptist */
-  --light-yellow: #dcae5e;
-  --yellow: #c58e2e;
-  --dark-yellow: #895802;
+  --light-yellow: #e5a83d;
+  --yellow: #d2901e;
+  --darkish-yellow: #bf8a2e;
+  --dark-yellow: #d48907;
   /* first swim */
-  --blue: #daf3fd;
-  --dark-blue: #13698b;
+  --blue: #2ea2cf;
+  --dark-blue: #0a4962;
+    /* shamisen */
+  --taupe: #dfbfbf;
+  --dark-taupe: #672e2e;
 
   /* shadow */
   --shadow-offset: 7px 7px 17px var(--black);
@@ -59,7 +62,7 @@ p {
   --border: 1px solid var(--black);
   --b-radius: 30px;
   /* hover */
-  --hover-up: translateY(-3px);
+  --hover-up: translateY(-1.5px);
 }
 
 /* shared shadow states for specific pages */

@@ -3,12 +3,8 @@
   text-align: justify;
   margin: auto;
   overflow-wrap: break-word;
-  background: var(--dark-blue);
+  background: linear-gradient(var(--blue), var(--dark-blue));
   color: var(--white);
-}
-
-.about > h1 {
-  margin-bottom: 10px;
 }
 
 .about-text-paragraphs {
@@ -25,13 +21,13 @@
 }
 
 .weblink {
-  color: var(--white);
+  color: var(--light-yellow);
   font-size: 2rem;
   transition: color 0.3s ease-in-out;
 }
 
 .weblink:hover {
-  color: var(--blue);
+  color: var(--taupe);
 }
 
 /* Medium devices (tablets) */

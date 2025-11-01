@@ -6,8 +6,8 @@ import { animated, useTransition } from 'react-spring';
 import Header from './components/Header/Header';
 import Section from './components/Sections/Section';
 import ScrollToTop from './components/ScrollToTop';
-// import ContactForm from './components/Sections/ContactForm/ContactForm';
 import AboutSection from './components/Sections/AboutSection/AboutSection';
+import ContactForm from './components/ContactForm/ContactForm';
 import './styling/App.css'
 import { aptistReleases } from './data/discographyData';
 
@@ -38,6 +38,7 @@ export default function App() {
           <Route path="aptist"
             element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)} />
           <Route path="about" element={<AboutSection />} />
+          <Route path="contact" element={<ContactForm />} />
           <Route path="*"
             element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)} />
         </Routes>

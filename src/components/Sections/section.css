@@ -4,21 +4,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 /* shared css for all sections */
-.main-header-center-align {
+.main-header.center-align {
   width: 70vw;
   margin: 0 auto;
 }
 
-.main-header-center-align-shamisen {
-  margin: 0 auto;
-}
-
 .main-header {
-  font-size: 5.5rem;
-  text-align: left;
+  font-size: 7.5rem;
   margin-bottom: 30px;
   font-weight: 700;
 }
@@ -34,13 +30,8 @@
 }
 
 .aptist-section {
-  background: var(--yellow);
+  background: linear-gradient(var(--yellow), var(--dark-yellow));
   color: var(--black);
-}
-.first-swim-section {
-  background: var(--dark-blue);
-  color: var(--blue);
-  padding-bottom: 30px;
 }
 
 .fs-release {
@@ -55,9 +46,6 @@
 .distrokid-link {
   color: inherit;
   font-style: italic;
-}
-.distrokid-link:hover {
-
 }
 
 /* Medium devices (tablets) */

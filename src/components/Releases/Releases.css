@@ -43,7 +43,7 @@
   position: relative;
 }
 
-.hide-show-all-button {
+.show-all {
   width: 60px;
   height: 60px;
   margin: auto;
@@ -58,7 +58,7 @@
   margin: 0 auto 30px;
 }
 
-.hide-show-all-button:hover { transform: var(--hover-up) }
+.show-all:hover { transform: var(--hover-up) }
 
 .fa-compact-disc {
   font-size: 2.5rem;

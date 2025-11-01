@@ -17,7 +17,9 @@ export default function AlbumArt(props: AlbumArtProps) {
   const [ isFlipped, setIsFlipped ] = useState<boolean>(false);
   const [ isToggled, setIsToggled ] = useState<boolean>(false);
   const discClasses = classNames('cd-circle cd-album', {
+    // add flipped class to disc when flipped=true
     'flipped': isFlipped,
+    // add hidden class to disc when album is not toggled (can see background)
     'hidden': !isToggled,
   });
   const showTracklist = () => {
@@ -25,7 +27,7 @@ export default function AlbumArt(props: AlbumArtProps) {
   };
 
   const handleClick = () => {
-    setIsToggled(prev => !prev)
+    setIsToggled(prevIsToggled => !prevIsToggled)
   }
 
   useEffect(() => {
@@ -33,19 +35,21 @@ export default function AlbumArt(props: AlbumArtProps) {
   }, [sharedState]);
 
 
-  const silverCircle = <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>;
+  const silverCircle =
+
+    <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>
   const goldCircle =
-  <span className={discClasses} onClick={showTracklist}>
-    <div className="tracklist">
-      <div className="tracklist-inner">
-        <ol>
-        {release.tracklist.map((song: string) => (
-          <li><p key={song} className="song-title">{song}</p></li>
-        ))}
-        </ol>
+    <span className={discClasses} onClick={showTracklist}>
+      <div className="tracklist">
+        <div className="tracklist-inner">
+          <ol>
+          {release.tracklist.map((song: string) => (
+            <li><p key={song} className="song-title">{song}</p></li>
+          ))}
+          </ol>
+        </div>
       </div>
-    </div>
-  </span>;
+    </span>
 
   return (
     <div className="album-artwork">

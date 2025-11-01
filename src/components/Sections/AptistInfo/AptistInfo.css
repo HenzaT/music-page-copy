@@ -15,6 +15,9 @@
 }
 
 .title-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -30,6 +33,7 @@
 
 .info-element {
   gap: 20px;
+  margin-bottom: 30px;
 }
 
 /* Medium devices (tablets) */

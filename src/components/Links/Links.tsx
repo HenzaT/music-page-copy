@@ -1,8 +1,6 @@
 import type { LinkData } from '../../data/linksData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ArtistShadowClasses from "../ReactClassNames/ArtistShadowClasses";
-import { useLocation } from 'react-router-dom';
-import { faSpotify, faItunes, faBandcamp, faTidal, faDeezer, type IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faSpotify, faItunes, faBandcamp, faTidal, faDeezer, faSoundcloud, type IconDefinition } from '@fortawesome/free-brands-svg-icons';
 
 interface LinkProps {
   data: LinkData[]
@@ -10,22 +8,25 @@ interface LinkProps {
 }
 
 export default function Links({ data, index }: LinkProps) {
-  const { pathname } = useLocation();
-  const linkClass = ArtistShadowClasses('link-circle', pathname);
 
   const artistLinkIcon = (icon: IconDefinition, data: LinkData[], index: number, service: string) => (
-    <div className={linkClass}>
+    <div className='link-circle'>
       <a href={data[index][service]} target="_blank"><FontAwesomeIcon icon={icon}/></a>
     </div>
   );
 
   return (
-    <section className="artist-links">
-      {data[index].spotify && artistLinkIcon(faSpotify, data, index, 'spotify')}
-      {data[index].apple && artistLinkIcon(faItunes, data, index, 'apple')}
-      {data[index].tidal && artistLinkIcon(faTidal, data, index, 'tidal')}
-      {data[index].bandcamp && artistLinkIcon(faBandcamp, data, index, 'bandcamp')}
-      {data[index].deezer && artistLinkIcon(faDeezer, data, index, 'deezer')}
+    <section className="artist-links" id="links">
+      <div className="links-top flex-row">
+        {data[index].spotify && artistLinkIcon(faSpotify, data, index, 'spotify')}
+        {data[index].apple && artistLinkIcon(faItunes, data, index, 'apple')}
+        {data[index].tidal && artistLinkIcon(faTidal, data, index, 'tidal')}
+      </div>
+      <div className="links-bottom flex-row">
+        {data[index].bandcamp && artistLinkIcon(faBandcamp, data, index, 'bandcamp')}
+        {data[index].deezer && artistLinkIcon(faDeezer, data, index, 'deezer')}
+        {data[index].soundcloud && artistLinkIcon(faSoundcloud, data, index, 'soundcloud')}
+      </div>
     </section>
   )
 }

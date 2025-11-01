@@ -12,6 +12,8 @@ export default function About(props: AboutProps) {
       <p>{data[index].text}</p>
       <br />
       <p>{data[index].text2}</p>
+      <br />
+      <p>{data[index].text3}</p>
     </section>
   )
 }

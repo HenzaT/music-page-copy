@@ -7,6 +7,7 @@ export interface LinkData {
   tidal: string,
   deezer: string,
   bandcamp: string,
+  soundcloud: string,
   [key: string]: string | undefined
 }
 
@@ -17,6 +18,7 @@ export const links: LinkData[] =  [
     apple: 'https://music.apple.com/us/artist/aptist/1555855403',
     tidal: 'https://tidal.com/browse/artist/23719868?u',
     deezer: 'https://www.deezer.com/en/artist/124929342',
-    bandcamp: 'https://aptist.bandcamp.com/'
+    bandcamp: 'https://aptist.bandcamp.com/',
+    soundcloud: 'https://soundcloud.com/aptist1'
   }
 ]

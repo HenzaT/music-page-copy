@@ -5,6 +5,7 @@ export interface ReleaseData {
   img: string,
   alt: string,
   tracklist: string[],
+  comingSoon: string, // 'yes', 'no', 'alreadyReleased'
   released: boolean
 }
 
@@ -28,6 +29,7 @@ export const aptistReleases: ReleaseData[] = [
       'April Tea',
       'All Mine.'
     ],
+    comingSoon: 'no',
     released: false
   },
   {
@@ -37,6 +39,7 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Some Days'
     ],
+    comingSoon: 'no',
     released: false
   },
   {
@@ -46,6 +49,7 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Revolutions'
     ],
+    comingSoon: 'yes',
     released: false
   },
   {
@@ -56,6 +60,7 @@ export const aptistReleases: ReleaseData[] = [
       'Invisible',
       'Main Sequence II'
     ],
+    comingSoon: 'no',
     released: false
   },
   {
@@ -65,6 +70,7 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Main Sequence'
     ],
+    comingSoon: 'yes',
     released: false
   },
   {
@@ -74,6 +80,7 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Into Skies'
     ],
+    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -84,6 +91,7 @@ export const aptistReleases: ReleaseData[] = [
       'Later',
       'Close Your Eyes'
     ],
+    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -93,6 +101,7 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'April Tea'
     ],
+    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -105,6 +114,7 @@ export const aptistReleases: ReleaseData[] = [
       'Think of June',
       'Gatehouse'
     ],
+    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -114,6 +124,7 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Reflections'
     ],
+    comingSoon: 'alreadyReleased',
     released: true
   }
 ]
