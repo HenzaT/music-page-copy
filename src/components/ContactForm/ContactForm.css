@@ -6,6 +6,7 @@
 .form-h1 {
   text-align: center;
   margin-top: 20px;
+  font-size: 7rem;
 }
 
 .info.contact-text {
@@ -16,8 +17,18 @@ form {
   margin-top: 20px;
 }
 
+.error-message {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgb(199, 6, 6);
+}
+
 label {
   font-size: 1.5rem;
+  width: 310px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 input[type='text'], input[type='email'], textarea {
@@ -62,6 +73,7 @@ input[type='submit']:disabled {
   background: transparent;
   border: 1px solid var(--dark-taupe);
   color: var(--dark-taupe);
+  cursor: not-allowed;
 }
 
 /* Medium devices (tablets) */
@@ -80,7 +92,7 @@ input[type='submit']:disabled {
   .info.contact-text > p {
     width: 50%;
   }
-  form {margin-left: 30px;}
+  form {margin-right: 30px;}
 }
 
 /* Extra large devices (large desktops) */
@@ -94,5 +106,5 @@ input[type='submit']:disabled {
   .info.contact-text > p {
     width: 50%;
   }
-  form {margin-left: 30px;}
+  form {margin-right: 30px;}
 }

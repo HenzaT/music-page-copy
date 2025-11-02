@@ -26,6 +26,7 @@ export default function AlbumArt(props: AlbumArtProps) {
     setIsFlipped(prevIsFlipped => !prevIsFlipped);
   }
 
+  // individual
   const handleClick = () => {
     setIsToggled(prevIsToggled => !prevIsToggled);
     if (isToggled) {
@@ -33,6 +34,7 @@ export default function AlbumArt(props: AlbumArtProps) {
     }
   }
 
+  // global
   useEffect(() => {
     setIsToggled(sharedState)
   }, [sharedState]);
@@ -55,10 +57,10 @@ export default function AlbumArt(props: AlbumArtProps) {
   return (
     <div className="album-artwork">
       <div className="release-img-container" onClick={handleClick}>
-        <span className={sharedState || isToggled ? "faded-square-3 collapsed" : "faded-square-3"}></span>
-        <span className={sharedState || isToggled ? "faded-square-2 collapsed" : "faded-square-2"}></span>
-        <span className={sharedState || isToggled ? "faded-square-1 collapsed" : "faded-square-1"}></span>
-        <img src={releaseImg} alt={releaseAlt} className={sharedState || isToggled ? "artwork shadow" : "artwork"} loading="lazy" />
+        <span className={isToggled || sharedState ? "faded-square-3 collapsed" : "faded-square-3"}></span>
+        <span className={isToggled || sharedState ? "faded-square-2 collapsed" : "faded-square-2"}></span>
+        <span className={isToggled || sharedState ? "faded-square-1 collapsed" : "faded-square-1"}></span>
+        <img src={releaseImg} alt={releaseAlt} className={isToggled || sharedState ? "artwork shadow" : "artwork"} loading="lazy" />
       </div>
       {tracklistLength > 1 ? goldCircle : silverCircle}
     </div>

@@ -21,13 +21,13 @@
 }
 
 .weblink {
-  color: var(--light-yellow);
+  color: var(--yellow);
   font-size: 2rem;
   transition: color 0.3s ease-in-out;
 }
 
 .weblink:hover {
-  color: var(--taupe);
+  color: var(--light-yellow);
 }
 
 /* Medium devices (tablets) */

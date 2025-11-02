@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
-
 
 function Header() {
   const { pathname } = useLocation();

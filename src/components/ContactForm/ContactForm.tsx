@@ -1,14 +1,17 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
+import { useMediaQuery } from 'react-responsive';
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement | null>(null);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [ buttonDisabled, setButtonDisabled] = useState<boolean>(false);
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
+  const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
+
+  const onSubmit = () => {
     emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8', })
       .then(
         function (response) {
@@ -22,61 +25,75 @@ export default function ContactForm() {
       )
   };
 
+  const contactText = () => (
+    <p>
+      If you'd like to ask me something, contact me regarding a release or just have a chat
+      about music in general, please contact me here.
+    </p>
+  )
+
   return (
     <section className="contact flex-col">
       <div className="banner">
         <div className="info contact-text">
-          <p>
-            If you'd like to ask me something, contact me regarding a release or just have a chat
-            about music in general, please contact me here.
-          </p>
-          <form ref={form} onSubmit={handleSubmit(onSubmit)} className="flex-col">
-            <label className='flex-col'>name
-              <input
-                {...register('name', {
-                  required: 'name is required',
-                  minLength: {
-                    value: 2,
-                    message: 'please provide a name'
-                  }
-                })}
-                type="text"
-                name="name" />
-                {errors.username && (
-                  <span className="error-message">
-                      {errors.username.message}
-                  </span>
-                )}
+          {isMobileScreen && contactText()}
+          <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+            <label>name
+              {errors.name?.message && (
+              <span className="error-message">
+                  {errors.name?.message}
+              </span>
+              )}
             </label>
-            <label className='flex-col'>email
-              <input
-                {...register('email', {
-                  required: true,
-                  pattern: {
-                    value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message: 'email is invalid'
-                  }
-                })}
-                type="email"
-                name="email" />
-                {errors.email && (
-                  <span className="error-message">
-                    {errors.email.message}
-                  </span>
-                )}
-            </label>
-            <label className='flex-col'>message
-              <textarea
-              {...register('message', {
-                required: true
+            <input
+              {...register('name', {
+                required: 'name is required',
+                minLength: {
+                  value: 2,
+                  message: 'please provide a name'
+                }
               })}
-                name="message" />
+              type="text"
+              name="name"
+            />
+            <label>email
+              {errors.email?.message && (
+              <span className="error-message">
+                {errors.email.message}
+              </span>
+              )}
             </label>
+            <input
+              {...register('email', {
+                required: 'email is required',
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: 'email is invalid'
+                }
+              })}
+              type="email"
+              name="email"
+            />
+            <label>message
+              {errors.message?.message && (
+              <span className="error-message">
+                {errors.message.message}
+              </span>
+              )}
+            </label>
+            <textarea
+            {...register('message', {
+              required: 'message is required'
+            })}
+              name="message"
+            />
             <input
               type="submit"
               disabled={buttonDisabled}
-              value={buttonDisabled ? 'Message Sent!' : 'Send'} />
+              value={buttonDisabled ? 'Message Sent!' : 'Send'}
+            />
           </form>
+          {isTabletAndBiggerScreen && contactText()}
         </div>
         <h1 className="main-header form-h1">contact</h1>
       </div>

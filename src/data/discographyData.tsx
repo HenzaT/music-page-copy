@@ -43,16 +43,6 @@ export const aptistReleases: ReleaseData[] = [
     released: false
   },
   {
-    title: 'Revolutions',
-    img: './src/assets/aptist/Revolutions.jpg',
-    alt: 'Revolutions Artwork',
-    tracklist: [
-      'Revolutions'
-    ],
-    comingSoon: 'yes',
-    released: false
-  },
-  {
     title: 'Invisible',
     img: './src/assets/aptist/I.jpg',
     alt: 'Invisible Artwork',
@@ -65,10 +55,20 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Main Sequence',
-    img: './src/assets/aptist/I.jpg',
+    img: './src/assets/aptist/Main-Sequence.jpeg',
     alt: 'Main Sequence Artwork',
     tracklist: [
       'Main Sequence'
+    ],
+    comingSoon: 'yes',
+    released: false
+  },
+  {
+    title: 'Revolutions',
+    img: './src/assets/aptist/Revolutions.jpg',
+    alt: 'Revolutions Artwork',
+    tracklist: [
+      'Revolutions'
     ],
     comingSoon: 'yes',
     released: false
