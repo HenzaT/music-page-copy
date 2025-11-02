@@ -23,17 +23,19 @@ export default function AlbumArt(props: AlbumArtProps) {
     'hidden': !isToggled,
   });
   const showTracklist = () => {
-    setIsFlipped(prevIsFlipped => !prevIsFlipped)
-  };
+    setIsFlipped(prevIsFlipped => !prevIsFlipped);
+  }
 
   const handleClick = () => {
-    setIsToggled(prevIsToggled => !prevIsToggled)
+    setIsToggled(prevIsToggled => !prevIsToggled);
+    if (isToggled) {
+      setIsFlipped(false);
+    }
   }
 
   useEffect(() => {
     setIsToggled(sharedState)
   }, [sharedState]);
-
 
   const silverCircle = <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>
 

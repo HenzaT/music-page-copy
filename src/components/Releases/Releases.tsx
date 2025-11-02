@@ -11,11 +11,13 @@ interface ReleasesProps {
 }
 
 export default function Releases({ data }: ReleasesProps ) {
-  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
-  const [ sharedIsCollapsed, setSharedIsCollapsed ] = useState<boolean>(false);
-  const [ isClicked, setIsClicked ] = useState<boolean>(false);
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
+
+  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+
+  const [ sharedIsCollapsed, setSharedIsCollapsed ] = useState<boolean>(false);
+  const [ isClicked, setIsClicked ] = useState<boolean>(false);
 
   const toggleSquares = () => {
     setSharedIsCollapsed(prevIsCollapsed => !prevIsCollapsed);
@@ -28,20 +30,24 @@ export default function Releases({ data }: ReleasesProps ) {
     </button>
   )
 
+  const tabletPlusHeader = () => (
+    isTabletAndBiggerScreen &&
+    <div className="large-screen-releases-header flex-col">
+      <h1>Releases</h1>
+      {showAllButton()}
+    </div>
+  )
+
+  const mobileHeader = () => (isMobileScreen && <h1>Releases</h1>)
+
   return (
     <>
       <section
         ref={ref}
         className={inView ? "releases-cards move-up" : "releases-cards off-screen"}
       >
-        {isTabletAndBiggerScreen &&
-        <div className="large-screen-releases-header flex-col">
-          <h1>Releases</h1>
-          {showAllButton()}
-        </div>
-        }
-        {isMobileScreen &&
-        <h1>Releases</h1>}
+        {tabletPlusHeader()}
+        {mobileHeader()}
         {data.map((release: ReleaseData) => (
         release.released &&
         <div className="card flex-col" key={release.img}>

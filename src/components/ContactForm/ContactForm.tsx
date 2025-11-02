@@ -1,17 +1,25 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement | null>(null);
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const [ buttonDisabled, setButtonDisabled] = useState<boolean>(false);
 
-  const onSubmit = () => {
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8', })
       .then(
-        () => { console.log('SUCCESS!'); },
-        (err) => { console.log('FAILED...', err); },
-      );
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          setButtonDisabled(true);
+          // response.status(400).send({ message: 'message sent' });
+        },
+        function (error) {
+          console.log('FAILED...', error);
+        }
+      )
   };
 
   return (
@@ -66,7 +74,8 @@ export default function ContactForm() {
             </label>
             <input
               type="submit"
-              value={onSubmit ? 'Message Sent!' : 'Send'} />
+              disabled={buttonDisabled}
+              value={buttonDisabled ? 'Message Sent!' : 'Send'} />
           </form>
         </div>
         <h1 className="main-header form-h1">contact</h1>
