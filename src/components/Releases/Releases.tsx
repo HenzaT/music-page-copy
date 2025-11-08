@@ -14,7 +14,7 @@ export default function Releases({ data }: ReleasesProps ) {
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
 
-  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   const [ sharedIsCollapsed, setSharedIsCollapsed ] = useState<boolean>(false);
   const [ isClicked, setIsClicked ] = useState<boolean>(false);

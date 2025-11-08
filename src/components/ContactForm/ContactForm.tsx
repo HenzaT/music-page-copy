@@ -8,8 +8,8 @@ export default function ContactForm() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [ buttonDisabled, setButtonDisabled] = useState<boolean>(false);
 
-  const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 768px)' });
-  const isMobileScreen = useMediaQuery({ query: '(max-width: 767px)' })
+  const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 992px)' });
+  const isMobileScreen = useMediaQuery({ query: '(max-width: 991px)' })
 
   const onSubmit = () => {
     emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8', })
@@ -37,11 +37,11 @@ export default function ContactForm() {
       <div className="banner">
         <div className="info contact-text">
           {isMobileScreen && contactText()}
-          <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+          <form className="flex-col" ref={form} onSubmit={handleSubmit(onSubmit)}>
             <label>name
               {errors.name?.message && (
               <span className="error-message">
-                  {errors.name?.message}
+                {errors.name?.message}
               </span>
               )}
             </label>
@@ -55,6 +55,9 @@ export default function ContactForm() {
               })}
               type="text"
               name="name"
+              placeholder="aptist"
+              required
+              aria-required="true"
             />
             <label>email
               {errors.email?.message && (
@@ -73,6 +76,9 @@ export default function ContactForm() {
               })}
               type="email"
               name="email"
+              placeholder="name@example.com"
+              required
+              aria-required="true"
             />
             <label>message
               {errors.message?.message && (
@@ -86,9 +92,13 @@ export default function ContactForm() {
               required: 'message is required'
             })}
               name="message"
+              placeholder='Write your message here'
+              required
+              aria-required="true"
             />
             <input
               type="submit"
+              aria-label="submit button"
               disabled={buttonDisabled}
               value={buttonDisabled ? 'Message Sent!' : 'Send'}
             />

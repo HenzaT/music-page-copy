@@ -5,22 +5,33 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  background: var(--yellow);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5000;
 }
 
 /* shared css for all sections */
 .main-header.center-align {
-  width: 70vw;
   margin: 0 auto;
 }
 
 .main-header {
   font-size: 7.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 .aptist-h1 {
-  margin-top: 70px;
+  margin-top: 60px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -30,7 +41,7 @@
 }
 
 .aptist-section {
-  background: linear-gradient(var(--yellow), var(--dark-yellow));
+  background: var(--yellow);
   color: var(--black);
 }
 

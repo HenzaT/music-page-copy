@@ -1,28 +1,59 @@
 .info {
-  width: 70vw;
+  width: 80vw;
   text-align: justify;
   margin: auto;
+  padding-top: 50px;
   overflow-wrap: break-word;
   transition: all 0.4s ease-in-out;
 }
 
+.aptist-profile-pic {
+  width: 80%;
+  display: block;
+  margin: auto;
+  box-shadow: 7px 7px 17px black;
+  clip-path: xywh(0 0 100% 100% round 60% 0);
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+}
+
+.aptist-profile-pic:hover {
+  transform: perspective(700px) rotateY(10deg);
+}
+
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
- .info {
-  width: 60vw;
- }
+  .info {
+    width: 60vw;
+  }
+
+  .info-text {
+    gap: 50px;
+  }
 }
 
 /* Large devices (desktops) */
 @media (min-width: 992px) {
- .info {
-  width: 60vw;
- }
+  .info {
+    width: 60vw;
+  }
+
+  .info-text {
+    gap: 50px;
+  }
 }
 
 /* Extra large devices (large desktops) */
 @media (min-width: 1200px) {
- .info {
-  width: 40vw;
- }
+  .info {
+    width: 70vw;
+  }
+
+  .info-text {
+    gap: 50px;
+  }
+
+  .aptist-profile-pic {
+    width: 40%;
+  }
 }

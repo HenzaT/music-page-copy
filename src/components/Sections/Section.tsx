@@ -1,13 +1,10 @@
 import About from '../About/About';
 import Releases from '../Releases/Releases';
 import Links from '../Links/Links';
-import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection';
-// import AptistInfo from '../Sections/AptistInfo/AptistInfo';
+import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection'; 
 import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
-import { aptistReleases, type ReleaseData } from '../../data/discographyData';
-// import { aptistSongData } from '../../data/aptistSongData';
-// import { useScroll, animated } from '@react-spring/web';
+import { aptistReleases, type ReleaseData } from '../../data/discographyData';  
 
 interface SectionProps {
   artistName: string,
@@ -27,22 +24,21 @@ export default function Section({ artistName, artistClassName, sectionClassName,
           <h1 className={`main-header ${artistClassName}-h1`}>{artistName}</h1>
         </div>
       </div>
-      <About
-        data={about}
-        index={aboutDataIndex}
-      />
-      {/* {artistDiscog === aptistReleases &&
-      <AptistInfo
-        songData={aptistSongData}
-        aptistDiscog={aptistReleases}
-      />} */}
-      <Releases
-        data={artistDiscog}
-      />
-      <Links
-        data={links}
-        index={linksDataIndex}
-      />
+      <div className="wrapper">
+        <About
+          data={about}
+          index={aboutDataIndex}
+        />
+        <div className="second-wrapper">
+          <Releases
+            data={artistDiscog}
+          />
+          <Links
+            data={links}
+            index={linksDataIndex}
+          />
+        </div>
+      </div>
     </section>
   )
 }

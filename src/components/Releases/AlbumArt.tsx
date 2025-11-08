@@ -39,6 +39,10 @@ export default function AlbumArt(props: AlbumArtProps) {
     setIsToggled(sharedState)
   }, [sharedState]);
 
+  useEffect(() => {
+    setIsFlipped(false)
+  }, [isToggled])
+
   const silverCircle = <span className={isToggled ? "cd-circle" : "cd-circle hidden"}></span>
 
   const goldCircle =

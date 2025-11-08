@@ -15,7 +15,7 @@ export const about: AboutData[] = [
     text2: `Originally from London, I grew up surrounded by a wide range of musical genres, from Japanese pop
     to metal. Whilst at university in Bristol, I was first introduced to electronic music and since then have worked
     on creating original music that blends these diverse influences.`,
-    text3: `Although primarily instrumental, I've started to include sampled vocals and am looking to include my
+    text3: `Although my music is primarily instrumental, I've started to include sampled vocals and am looking to include my
     own vocals on future releases.`
   },
 ]

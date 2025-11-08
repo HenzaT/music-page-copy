@@ -5,8 +5,8 @@
 
 .form-h1 {
   text-align: center;
-  margin-top: 20px;
-  font-size: 7rem;
+  margin-top: 10px;
+  font-size: 6rem;
 }
 
 .info.contact-text {
@@ -71,14 +71,12 @@ input[type='submit']:hover {
 
 input[type='submit']:disabled {
   background: transparent;
-  border: 1px solid var(--dark-taupe);
   color: var(--dark-taupe);
   cursor: not-allowed;
 }
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
-
 }
 
 /* Large devices (desktops) */
@@ -87,10 +85,10 @@ input[type='submit']:disabled {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   .info.contact-text > p {
-    width: 50%;
+    width: 40%;
   }
   form {margin-right: 30px;}
 }
@@ -98,13 +96,13 @@ input[type='submit']:disabled {
 /* Extra large devices (large desktops) */
 @media (min-width: 1200px) {
   .info.contact-text {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; */
+    /* justify-content: space-between; */
   }
   .info.contact-text > p {
-    width: 50%;
+    width: 20%;
   }
   form {margin-right: 30px;}
 }

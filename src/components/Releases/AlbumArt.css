@@ -112,3 +112,27 @@
   z-index: 8900;
   transform: translate(-60px, 0px);
 }
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
+  .new-release-img-main {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .new-release-img-main {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  .new-release-img-main {
+    width: 250px;
+    height: 250px;
+  }
+}
