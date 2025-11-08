@@ -10,7 +10,7 @@
 .aptist-profile-pic {
   width: 80%;
   display: block;
-  margin: auto;
+  margin: 10px auto;
   box-shadow: 7px 7px 17px black;
   clip-path: xywh(0 0 100% 100% round 60% 0);
   border-radius: 2px;
