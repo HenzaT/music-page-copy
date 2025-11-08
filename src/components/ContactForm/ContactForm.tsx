@@ -12,17 +12,21 @@ export default function ContactForm() {
   const isMobileScreen = useMediaQuery({ query: '(max-width: 991px)' })
 
   const onSubmit = () => {
-    emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8', })
+    if (!form.current) {
+      console.warn('Contact form not mounted');
+      return;
+    }
+    emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8' })
       .then(
         function (response) {
           console.log('SUCCESS!', response.status, response.text);
           setButtonDisabled(true);
           // response.status(400).send({ message: 'message sent' });
         },
-        function (error) {
+        function (error: unknown) {
           console.log('FAILED...', error);
         }
-      )
+      );
   };
 
   const contactText = () => (
@@ -32,16 +36,24 @@ export default function ContactForm() {
     </p>
   )
 
+  type FieldError = string | { message?: string } | null | undefined
+  const renderError = (field: FieldError) => {
+    if (!field) return null;
+    if (typeof field === 'string') return field;
+    if (typeof field === 'object' && 'message' in field) return field.message;
+    return null;
+  };
+
   return (
     <section className="contact flex-col">
       <div className="banner">
         <div className="info contact-text">
           {isMobileScreen && contactText()}
-          <form className="flex-col" ref={form} onSubmit={handleSubmit(onSubmit)}>
+          <form className="flex-col" ref={form} onSubmit={(e) => void handleSubmit(onSubmit)(e)}>
             <label>name
-              {errors.name?.message && (
+              {renderError(errors.name) && (
               <span className="error-message">
-                {errors.name?.message}
+                {renderError(errors.name)}
               </span>
               )}
             </label>
@@ -60,9 +72,9 @@ export default function ContactForm() {
               aria-required="true"
             />
             <label>email
-              {errors.email?.message && (
+              {renderError(errors.email) && (
               <span className="error-message">
-                {errors.email.message}
+                {renderError(errors.email)}
               </span>
               )}
             </label>
@@ -81,9 +93,9 @@ export default function ContactForm() {
               aria-required="true"
             />
             <label>message
-              {errors.message?.message && (
+              {renderError(errors.message) && (
               <span className="error-message">
-                {errors.message.message}
+                {renderError(errors.message)}
               </span>
               )}
             </label>
