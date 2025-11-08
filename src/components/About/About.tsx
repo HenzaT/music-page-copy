@@ -1,5 +1,6 @@
 import type { AboutData } from '../../data/aboutData';
 import { useMediaQuery } from 'react-responsive';
+import profilePic from '../../assets/aptist/aptist-pic.jpg'
 
 interface AboutProps {
   data: AboutData[],
@@ -13,7 +14,7 @@ export default function About({ data, index }: AboutProps) {
     <>
       <p>{data[index].text}</p>
       <br />
-      <img src="src/assets/aptist/aptist-pic.JPG" alt="aptist-profile-photo" className="aptist-profile-pic" />
+      <img src={profilePic} alt="aptist-profile-photo" className="aptist-profile-pic" />
       <br />
       <p>{data[index].text2}</p>
       <br />
@@ -24,7 +25,7 @@ export default function About({ data, index }: AboutProps) {
   // desktop+
   const adjacentLayout = () => (
     <div className='info-text flex-row'>
-      <img src="src/assets/aptist/aptist-pic.JPG" alt="aptist-profile-photo" className="aptist-profile-pic" />
+      <img src={profilePic} alt="aptist-profile-photo" className="aptist-profile-pic" />
       <div className="flex-col">
         <p>{data[index].text}</p>
         <br />

@@ -1,4 +1,13 @@
 // data all releases
+import dreamState from '../assets/aptist/dream-state.jpg';
+import someDays from '../assets/aptist/Some-Days.jpeg';
+import mainSequence from '../assets/aptist/Main-Sequence.jpeg';
+import revolutions from '../assets/aptist/Revolutions.jpg';
+import intoSkies from '../assets/aptist/Into-Skies.jpg';
+import later from '../assets/aptist/Later.jpeg';
+import aprilTea from '../assets/aptist/April-Tea.jpg';
+import sundown from '../assets/aptist/Sundown.jpg';
+import reflections from '../assets/aptist/Reflections.png';
 
 export interface ReleaseData {
   title: string,
@@ -13,7 +22,7 @@ export interface ReleaseData {
 export const aptistReleases: ReleaseData[] = [
   {
     title: 'Dream State',
-    img: './src/assets/aptist/dream-state.jpg',
+    img: dreamState,
     alt: 'Dream State Album Artwork',
     tracklist: [
       'Intro',
@@ -34,7 +43,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Some Days',
-    img: './src/assets/aptist/Some-Days.jpeg',
+    img: someDays,
     alt: 'Some Days Artwork',
     tracklist: [
       'Some Days'
@@ -55,7 +64,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Main Sequence',
-    img: './src/assets/aptist/Main-Sequence.jpeg',
+    img: mainSequence,
     alt: 'Main Sequence Artwork',
     tracklist: [
       'Main Sequence'
@@ -65,7 +74,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Revolutions',
-    img: './src/assets/aptist/Revolutions.jpg',
+    img: revolutions,
     alt: 'Revolutions Artwork',
     tracklist: [
       'Revolutions'
@@ -75,7 +84,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Into Skies',
-    img: './src/assets/aptist/Into-Skies.jpg',
+    img: intoSkies,
     alt: 'Into Skies Artwork',
     tracklist: [
       'Into Skies'
@@ -85,7 +94,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Later',
-    img: './src/assets/aptist/Later.jpeg',
+    img: later,
     alt: 'Later Artwork',
     tracklist: [
       'Later',
@@ -96,7 +105,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'April Tea',
-    img: './src/assets/aptist/April-Tea.jpg',
+    img: aprilTea,
     alt: 'April Tea Artwork',
     tracklist: [
       'April Tea'
@@ -106,7 +115,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Sundown',
-    img: './src/assets/aptist/Sundown.jpg',
+    img: sundown,
     alt: 'Sundown EP Artwork',
     tracklist: [
       'Sundown',
@@ -119,7 +128,7 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Reflections',
-    img: './src/assets/aptist/Reflections.png',
+    img: reflections,
     alt: 'Reflections Artwork',
     tracklist: [
       'Reflections'
