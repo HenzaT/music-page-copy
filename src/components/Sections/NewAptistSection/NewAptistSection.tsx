@@ -26,11 +26,6 @@ const newestAptistReleaseName =
       </a>.
     </h1>
   </div>
-  {/* <AudioPlayer
-    src='https://soundcloud.com/aptist1/into-skies-master-5-8-25-2'
-    volume={0.5}
-    showJumpControls={false}
-  /> */}
 </section>
 
 

@@ -1,10 +1,12 @@
 import About from '../About/About';
 import Releases from '../Releases/Releases';
 import Links from '../Links/Links';
-import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection'; 
+import NewAptistSection from '../Sections/NewAptistSection/NewAptistSection';
 import { about } from '../../data/aboutData';
 import { links } from '../../data/linksData';
-import { aptistReleases, type ReleaseData } from '../../data/discographyData';  
+import { aptistReleases, type ReleaseData } from '../../data/discographyData';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 interface SectionProps {
   artistName: string,
@@ -15,17 +17,23 @@ interface SectionProps {
   artistDiscog: ReleaseData[]
 }
 
+const linkToAbout = () => (
+  <a href="#about"><FontAwesomeIcon icon={faChevronDown} /></a>
+)
+
 export default function Section({ artistName, artistClassName, sectionClassName, aboutDataIndex, linksDataIndex, artistDiscog }: SectionProps) {
   return (
     <section className={sectionClassName}>
       <div className="banner">
         {artistDiscog === aptistReleases && <NewAptistSection />}
-        <div className="main-header center-align">
+        <div className="main-header center-align flex-row">
           <h1 className={`main-header ${artistClassName}-h1`}>{artistName}</h1>
+          {linkToAbout()}
         </div>
       </div>
       <div className="wrapper">
         <About
+          id="about"
           data={about}
           index={aboutDataIndex}
         />

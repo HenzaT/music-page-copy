@@ -4,10 +4,11 @@ import { profilePic } from '../../data/discographyData';
 
 interface AboutProps {
   data: AboutData[],
-  index: number
+  index: number,
+  id: id
 }
 
-export default function About({ data, index }: AboutProps) {
+export default function About({ data, index, id }: AboutProps) {
   const isMobileAndTabletScreen = useMediaQuery({ query: '(max-width: 1199px)' })
 
   const mobileLayout = () => (
@@ -37,7 +38,7 @@ export default function About({ data, index }: AboutProps) {
   )
 
   return (
-    <section className="info">
+    <section className="info" id={id}>
       {isMobileAndTabletScreen ? mobileLayout() : adjacentLayout()}
     </section>
   )

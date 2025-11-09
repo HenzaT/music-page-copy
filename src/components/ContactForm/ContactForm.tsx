@@ -5,14 +5,16 @@ import { useMediaQuery } from 'react-responsive';
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
+  // form-related
   const form = useRef<HTMLFormElement | null>(null);
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [ buttonDisabled, setButtonDisabled] = useState<boolean>(false);
-
+  // media queries
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 992px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 991px)' })
-
+  // recaptcha-related
   const recaptchaSiteKey = String(import.meta.env.VITE_SITE_KEY);
+  const captchaRef = useRef(null);
 
   const onSubmit = () => {
     if (!form.current) {
@@ -20,11 +22,12 @@ export default function ContactForm() {
       return;
     }
     emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8' })
-      .then(
-        function (response) {
+    .then(
+      function (response) {
           console.log('SUCCESS!', response.status, response.text);
           setButtonDisabled(true);
-          // response.status(400).send({ message: 'message sent' });
+          const token = captchaRef.current.getValue();
+          captchaRef.current.reset();
         },
         function (error: unknown) {
           console.log('FAILED...', error);
@@ -111,7 +114,10 @@ export default function ContactForm() {
               required
               aria-required="true"
             />
-            <ReCAPTCHA sitekey={recaptchaSiteKey}/>
+            <ReCAPTCHA
+              sitekey={recaptchaSiteKey}
+              ref={captchaRef}
+            />
             <input
               type="submit"
               aria-label="submit button"
