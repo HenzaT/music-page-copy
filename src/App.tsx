@@ -44,9 +44,9 @@ export default function App() {
           position: "relative",
           minHeight: "100vh",
           background:
-            location.pathname === '/aptist' ? 'var(--yellow)' :
+            location.pathname === '/contact' ? 'var(--taupe)' :
             location.pathname === '/about' ? 'linear-gradient(var(--blue), var(--dark-blue))' :
-            'var(--taupe)'
+            'var(--yellow)'
         }}
       >
         <animated.div

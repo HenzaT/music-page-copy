@@ -1,6 +1,6 @@
 import type { AboutData } from '../../data/aboutData';
 import { useMediaQuery } from 'react-responsive';
-import profilePic from '../../assets/aptist/aptist-pic.jpg'
+import { profilePic } from '../../data/discographyData';
 
 interface AboutProps {
   data: AboutData[],

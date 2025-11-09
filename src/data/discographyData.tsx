@@ -1,4 +1,5 @@
 // data all releases
+import aptistPic from '../assets/aptist/aptist-pic.jpg';
 import dreamState from '../assets/aptist/dream-state.jpg';
 import someDays from '../assets/aptist/Some-Days.jpeg';
 import mainSequence from '../assets/aptist/Main-Sequence.jpeg';
@@ -17,6 +18,8 @@ export interface ReleaseData {
   comingSoon: string, // 'yes', 'no', 'alreadyReleased'
   released: boolean
 }
+
+export const profilePic: string = aptistPic;
 
 // array of objects [ {}, {}, {} ]
 export const aptistReleases: ReleaseData[] = [
