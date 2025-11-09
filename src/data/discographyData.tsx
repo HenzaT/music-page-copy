@@ -1,5 +1,5 @@
 // data all releases
-import aptistPic from '../assets/aptist/aptist-pic.jpg';
+import aptistPic from '../assets/aptist/aptist-profile.jpg';
 import dreamState from '../assets/aptist/dream-state.jpg';
 import someDays from '../assets/aptist/Some-Days.jpeg';
 import mainSequence from '../assets/aptist/Main-Sequence.jpeg';
