@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section className="about flex-col">
-      <div className="about-text-paragraphs banner">
+      <div className="about-text-paragraphs banner2">
         <p>
           I also play bass in a band called First Swim, as well as a Japanese instrument called the shamisen.
         </p>
