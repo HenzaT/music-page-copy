@@ -14,26 +14,37 @@ export default function ContactForm() {
   const isMobileScreen = useMediaQuery({ query: '(max-width: 991px)' })
   // recaptcha-related
   const recaptchaSiteKey = String(import.meta.env.VITE_SITE_KEY);
-  const captchaRef = useRef(null);
+  const captchaRef = useRef<ReCAPTCHA | null>(null);
 
-  const onSubmit = () => {
-    if (!form.current) {
-      console.warn('Contact form not mounted');
-      return;
-    }
-    emailjs.sendForm('service_odao7aw', 'template_obyqnrn', form.current, { publicKey: 'sWhLa9wWGJbXmPfQ8' })
-    .then(
-      function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-          setButtonDisabled(true);
-          const token = captchaRef.current.getValue();
-          captchaRef.current.reset();
-        },
-        function (error: unknown) {
-          console.log('FAILED...', error);
-        }
-      );
+  const onSubmit = async () => {
+  if (!form.current) {
+    console.warn('Contact form not mounted');
+    return;
+  }
+
+  const token = captchaRef.current?.getValue();
+  if (!token) {
+    console.warn('Please complete the reCAPTCHA');
+    return;
+  }
+
+  try {
+    const response = await emailjs.sendForm(
+      'service_odao7aw',
+      'template_obyqnrn',
+      form.current,
+      { publicKey: 'sWhLa9wWGJbXmPfQ8' }
+    );
+
+    console.log('SUCCESS!', response.status, response.text);
+    setButtonDisabled(true);
+  } catch (error) {
+    console.error('FAILED...', error);
+  } finally {
+    captchaRef.current?.reset();
+  }
   };
+
 
   const contactText = () => (
     <p>

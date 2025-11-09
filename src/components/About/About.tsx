@@ -5,7 +5,7 @@ import { profilePic } from '../../data/discographyData';
 interface AboutProps {
   data: AboutData[],
   index: number,
-  id: id
+  id: string
 }
 
 export default function About({ data, index, id }: AboutProps) {
