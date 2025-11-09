@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   const contactText = () => (
     <p>
-      If you'd like to ask me something, contact me regarding a release or just have a chat
+      If you'd like to contact me regarding a release or just have a chat
       about music in general, please contact me here.
     </p>
   )
