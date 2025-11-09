@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 import { useMediaQuery } from 'react-responsive';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -10,6 +11,8 @@ export default function ContactForm() {
 
   const isTabletAndBiggerScreen = useMediaQuery({ query: '(min-width: 992px)' });
   const isMobileScreen = useMediaQuery({ query: '(max-width: 991px)' })
+
+  const recaptchaSiteKey = String(import.meta.env.VITE_SITE_KEY);
 
   const onSubmit = () => {
     if (!form.current) {
@@ -108,6 +111,7 @@ export default function ContactForm() {
               required
               aria-required="true"
             />
+            <ReCAPTCHA sitekey={recaptchaSiteKey}/>
             <input
               type="submit"
               aria-label="submit button"
