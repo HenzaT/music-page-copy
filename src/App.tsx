@@ -42,7 +42,7 @@ export default function App() {
       <div
         style={{
           position: "relative",
-          minHeight: "100vh",
+          minHeight: "100dvh",
           background:
             location.pathname === '/contact' ? 'var(--taupe)' :
             location.pathname === '/about' ? 'linear-gradient(var(--blue), var(--dark-blue))' :
