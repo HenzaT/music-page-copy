@@ -17,44 +17,44 @@ export default function ContactForm() {
   const captchaRef = useRef<ReCAPTCHA | null>(null);
 
   const onSubmit = async () => {
-  if (!form.current) {
-    console.warn('Contact form not mounted');
-    return;
-  }
+    if (!form.current) {
+      console.warn('Contact form not mounted');
+      return;
+    }
 
-  if (!captchaRef.current) {
-    console.warn('reCAPTCHA not ready');
-    return;
-  }
+    if (!captchaRef.current) {
+      console.warn('reCAPTCHA not ready');
+      return;
+    }
 
-  const token = captchaRef.current.getValue();
-  if (!token) {
-    console.warn('Please complete the reCAPTCHA');
-    return;
-  }
+    try {
+      const token = await captchaRef.current.executeAsync();
 
-  const hiddenInput = form.current.querySelector<HTMLInputElement>('input[name="g-recaptcha-response"]');
-  if (hiddenInput) {
-    hiddenInput.value = token;
-  } else {
-    console.warn('Hidden reCAPTCHA input not found on the form');
-  }
+      if (!token) {
+        console.warn('Please complete the reCAPTCHA');
+        return;
+      }
 
-  try {
-    const response = await emailjs.sendForm(
-      'service_odao7aw',
-      'template_obyqnrn',
-      form.current,
-      { publicKey: 'sWhLa9wWGJbXmPfQ8' }
-    );
+      const hiddenInput = form.current.querySelector<HTMLInputElement>('input[name="g-recaptcha-response"]');
+      if (hiddenInput) {
+        hiddenInput.value = token;
+      } else {
+        console.warn('Hidden reCAPTCHA input not found on the form');
+      }
 
-    console.log('SUCCESS!', response.status, response.text);
-    setButtonDisabled(true);
-  } catch (error) {
-    console.error('FAILED...', error);
-  } finally {
-    captchaRef.current.reset();
-  }
+      const response = await emailjs.sendForm(
+        'service_odao7aw',
+        'template_obyqnrn',
+        form.current,
+        { publicKey: 'sWhLa9wWGJbXmPfQ8' }
+      );
+      console.log('SUCCESS!', response.status, response.text);
+      setButtonDisabled(true);
+    } catch (error) {
+      console.error('FAILED...', error);
+    } finally {
+      captchaRef.current.reset();
+    }
   };
 
 
@@ -140,6 +140,7 @@ export default function ContactForm() {
             <ReCAPTCHA
               sitekey={recaptchaSiteKey}
               ref={captchaRef}
+              size="invisible"
             />
             <input type="hidden" name="g-recaptcha-response" />
             <input
