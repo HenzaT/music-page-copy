@@ -25,7 +25,7 @@ export default function Releases({ data }: ReleasesProps ) {
   };
 
   const showAllButton = () => (
-    <button type="button" className='show-all' onClick={(toggleSquares)}>
+    <button type="button" className='show-all' onClick={(toggleSquares)} aria-pressed={isClicked} aria-label="toggle all discs within albums">
       <FontAwesomeIcon icon={faCompactDisc} className={isClicked ? 'rotated' : 'disc-icon'}/>
     </button>
   )

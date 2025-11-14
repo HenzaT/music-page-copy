@@ -18,7 +18,7 @@
 }
 
 .aptist-profile-pic:hover {
-  transform: perspective(700px) rotateY(10deg);
+  transform: perspective(900px) rotateY(8deg);
 }
 
 /* Medium devices (tablets) */

@@ -3,7 +3,7 @@ import type { ReleaseData } from './data/discographyData';
 import { animated, useTransition } from 'react-spring';
 import { useState } from 'react';
 
-import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
 import Section from './components/Sections/Section';
 import ScrollToTop from './components/ScrollToTop';
 import AboutSection from './components/Sections/AboutSection/AboutSection';
@@ -39,7 +39,7 @@ export default function App() {
     );
 
     return transitions((style, item) => (
-      <div
+      <main
         style={{
           position: "relative",
           minHeight: "100dvh",
@@ -67,14 +67,31 @@ export default function App() {
           </Routes>
           )}
         </animated.div>
-      </div>
+      </main>
     ));
+  }
+
+  const Header = () => {
+    const location = useLocation();
+    return (
+      <header
+        style={{
+          background:
+          location.pathname === '/contact' ? 'var(--taupe)' :
+          location.pathname === '/about' ? 'var(--blue)' :
+          'var(--yellow)'
+        }}
+      >
+        <a href="#about" className="skip">Skip to main content</a>
+      </header>
+    );
   }
 
   return (
     <BrowserRouter>
-      {showContent && <ScrollToTop />}
       <Header />
+      {showContent && <ScrollToTop />}
+      <Navbar />
       <RouteTransition />
     </BrowserRouter>
   )

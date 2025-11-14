@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
-function Header() {
+export default function Navbar() {
   const { pathname } = useLocation();
   const navColorMatchClass = classNames('navlink navlink-ltr', {
     'aptist-color': pathname === '/aptist' || pathname === '/',
@@ -11,10 +11,8 @@ function Header() {
 
   const navLink = (route: string, leftOrRight: string, text: string) => {
     return (
-      <NavLink to={route}>
-        <button className={`nav-icon-button ${leftOrRight}`} type='button'>
-          <h2 className={navColorMatchClass}>{text}</h2>
-        </button>
+      <NavLink to={route} className={`nav-icon-link ${leftOrRight}`} aria-label={`link to ${text} page`}>
+        <h2 className={navColorMatchClass}>{text}</h2>
       </NavLink>
     )
   }
@@ -41,12 +39,10 @@ function Header() {
   }
 
   return (
-    <nav>
+    <nav role="navigation">
       {leftNavText()}
-      <a href="#top" className="back-to-top"></a>
+      <a href="#top" className="back-to-top" role="navigation" aria-label="go back to top of page"></a>
       {rightNavText()}
     </nav>
   )
-}
-
-export default Header;
+};

@@ -59,10 +59,7 @@ export default function ContactForm() {
 
 
   const contactText = () => (
-    <p>
-      If you'd like to contact me regarding a release or just have a chat
-      about music in general, please contact me here.
-    </p>
+    <p>If you'd like to contact me regarding a release or just have a chat, please contact me here.</p>
   )
 
   type FieldError = string | { message?: string } | null | undefined
@@ -145,7 +142,7 @@ export default function ContactForm() {
             <input type="hidden" name="g-recaptcha-response" />
             <input
               type="submit"
-              aria-label="submit button"
+              aria-label="submit form button"
               disabled={buttonDisabled}
               value={buttonDisabled ? 'Message Sent!' : 'Send'}
             />

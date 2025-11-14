@@ -13,7 +13,7 @@ export default function Links({ data, index }: LinkProps) {
 
   const artistLinkIcon = (icon: IconDefinition, data: LinkData[], index: number, service: string) => (
     <div className='link-circle'>
-      <a href={data[index][service]} target="_blank"><FontAwesomeIcon icon={icon} /></a>
+      <a href={data[index][service]} target="_blank" aria-label={`link to aptist ${service} page`}><FontAwesomeIcon icon={icon} /></a>
     </div>
   );
 

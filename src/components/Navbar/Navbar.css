@@ -2,7 +2,7 @@ nav {
   position: fixed;
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(80px);
-  border-radius: var(--b-radius);
+  border-radius: 50px;
   width: 90%;
   height: 6vh;
   left: 50%;
@@ -33,25 +33,25 @@ nav {
   width: 30px;
 }
 
-.nav-icon-button, .nav-button {
+.nav-icon-link, .nav-link {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-.nav-icon-button {
+.nav-icon-link {
   font-size: 1.3rem;
 }
 
-.nav-icon-button.left {
+.nav-icon-link.left {
   margin-left: 20px;
 }
 
-.nav-icon-button.right {
+.nav-icon-link.right {
   margin-right: 20px;
 }
 
-.nav-button {
+.nav-link {
   margin: 0 30px 8px 0;
   font-size: 3.5rem;
   transition: transform 0.3s ease-in-out;

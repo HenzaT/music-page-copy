@@ -1,8 +1,4 @@
 .about {
-  height: 100dvh;
-  text-align: justify;
-  margin: auto;
-  overflow-wrap: break-word;
   background: linear-gradient(var(--blue), var(--dark-blue));
   color: var(--white);
 }
@@ -17,8 +13,14 @@
 }
 
 .about-text-paragraphs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   width: 80vw;
+  text-align: justify;
+  margin: 0 auto;
+  overflow-wrap: break-word;
 }
 
 .about-text-paragraphs > a {
