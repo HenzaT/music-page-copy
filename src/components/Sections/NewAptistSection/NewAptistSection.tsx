@@ -19,12 +19,12 @@ const newestAptistReleaseName =
     {newestAptistImage('main')}
   </div>
   <div className="new-release-links flex-row">
-    <h1>{newestAptistRelease?.title}. <br />
+    <h2>{newestAptistRelease?.title}. <br />
       Stream it&nbsp;
       <a href="https://distrokid.com/hyperfollow/aptist/into-skies" className="distrokid-link" target="_blank">
         here
       </a>.
-    </h1>
+    </h2>
   </div>
 </section>
 

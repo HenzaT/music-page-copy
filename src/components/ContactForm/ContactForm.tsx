@@ -22,10 +22,22 @@ export default function ContactForm() {
     return;
   }
 
-  const token = captchaRef.current?.getValue();
+  if (!captchaRef.current) {
+    console.warn('reCAPTCHA not ready');
+    return;
+  }
+
+  const token = captchaRef.current.getValue();
   if (!token) {
     console.warn('Please complete the reCAPTCHA');
     return;
+  }
+
+  const hiddenInput = form.current.querySelector<HTMLInputElement>('input[name="g-recaptcha-response"]');
+  if (hiddenInput) {
+    hiddenInput.value = token;
+  } else {
+    console.warn('Hidden reCAPTCHA input not found on the form');
   }
 
   try {
@@ -41,7 +53,7 @@ export default function ContactForm() {
   } catch (error) {
     console.error('FAILED...', error);
   } finally {
-    captchaRef.current?.reset();
+    captchaRef.current.reset();
   }
   };
 
@@ -129,6 +141,7 @@ export default function ContactForm() {
               sitekey={recaptchaSiteKey}
               ref={captchaRef}
             />
+            <input type="hidden" name="g-recaptcha-response" />
             <input
               type="submit"
               aria-label="submit button"

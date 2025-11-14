@@ -33,12 +33,12 @@ export default function Releases({ data }: ReleasesProps ) {
   const tabletPlusHeader = () => (
     isTabletAndBiggerScreen &&
     <div className="large-screen-releases-header flex-col">
-      <h1>Releases</h1>
+      <h2>Releases</h2>
       {showAllButton()}
     </div>
   )
 
-  const mobileHeader = () => (isMobileScreen && <h1>Releases</h1>)
+  const mobileHeader = () => (isMobileScreen && <h2>Releases</h2>)
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function Releases({ data }: ReleasesProps ) {
               sharedState={sharedIsCollapsed}
             />
           </div>
-          <h2>{release.title}</h2>
+          <h3>{release.title}</h3>
         </div>
         ))}
       </section>

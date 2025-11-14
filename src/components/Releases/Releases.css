@@ -3,7 +3,7 @@
   transition: all 0.4s ease-in-out;
 }
 
-.releases-cards > h1 {
+.releases-cards > h2 {
   text-align: center;
   /* text-decoration: underline; */
   font-weight: 800;
@@ -24,7 +24,7 @@
   margin: 20px;
 }
 
-.card > h2 {
+.card > h3 {
   padding-top: 20px;
   font-size: 1.8rem;
 }
@@ -83,7 +83,7 @@
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
-  .large-screen-releases-header > h1 {
+  .large-screen-releases-header > h2 {
     font-size: 4rem;
   }
   .releases-cards {
@@ -97,7 +97,7 @@
 
 /* Large devices (desktops) */
 @media (min-width: 992px) {
-  .large-screen-releases-header > h1 {
+  .large-screen-releases-header > h2 {
     font-size: 4rem;
   }
   .releases-cards {
@@ -112,7 +112,7 @@
 
 /* Extra large devices (large desktops) */
 @media (min-width: 1200px) {
-  .large-screen-releases-header > h1 {
+  .large-screen-releases-header > h2 {
     font-size: 4rem;
   }
   .releases-cards {
