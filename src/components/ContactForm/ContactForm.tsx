@@ -35,7 +35,7 @@ export default function ContactForm() {
         return;
       }
 
-      const hiddenInput = form.current.querySelector<HTMLInputElement>('input[name="g-recaptcha-response"]');
+      const hiddenInput = form.current.querySelector<HTMLInputElement>('input[name="grecaptcha-response"]');
       if (hiddenInput) {
         hiddenInput.value = token;
       } else {
@@ -140,7 +140,7 @@ export default function ContactForm() {
               ref={captchaRef}
               size="invisible"
             />
-            <input type="hidden" name="g-recaptcha-response" />
+            <input type="hidden" name="grecaptcha-response" />
             <input
               type="submit"
               aria-label="submit form button"
