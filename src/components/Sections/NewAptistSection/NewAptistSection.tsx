@@ -26,8 +26,8 @@ const newestAptistReleaseName =
         href="https://distrokid.com/hyperfollow/aptist/into-skies"
         className="distrokid-link"
         target="_blank"
-        aria-label={`distrokid link to ${newestAptistRelease?.title ?? ''}`}
-      >here
+        aria-label={`distrokid link to ${newestAptistRelease?.title ?? ''}`}>
+          here
       </a>.
     </h2>
   </div>

@@ -2,7 +2,8 @@ export default function About() {
   return (
     <section className="about">
       <div className="banner">
-        <div className="about-text-paragraphs">
+        <div className="about-text-paragraphs flex-col-reverse">
+          <h1 className="main-header form-h1">about</h1>
           <p>
             I also play bass in a band called First Swim, as well as a Japanese instrument called the shamisen.
           </p>
@@ -19,7 +20,6 @@ export default function About() {
             It aims to give you the perfect starting point for when you're in need of some inspiration.
           </p>
         </div>
-        <h1 className="main-header form-h1">about</h1>
       </div>
     </section>
   )

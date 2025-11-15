@@ -82,7 +82,7 @@ export default function App() {
           'var(--yellow)'
         }}
       >
-        <a href="#about" className="skip">Skip to main content</a>
+        <a href="#about" className="skip" aria-label="skip link">Skip to main content</a>
       </header>
     );
   }

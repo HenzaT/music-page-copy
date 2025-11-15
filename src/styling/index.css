@@ -82,6 +82,13 @@ p {
   align-items: center;
 }
 
+.flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .flex-row {
   display: flex;
   justify-content: center;

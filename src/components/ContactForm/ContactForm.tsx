@@ -71,8 +71,9 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="contact flex-col">
-      <div className="banner">
+    <section className="contact">
+      <div className="banner flex-col-reverse">
+        <h1 className="main-header form-h1">contact</h1>
         <div className="info contact-text">
           {isMobileScreen && contactText()}
           <form className="flex-col" ref={form} onSubmit={(e) => void handleSubmit(onSubmit)(e)}>
@@ -149,7 +150,6 @@ export default function ContactForm() {
           </form>
           {isTabletAndBiggerScreen && contactText()}
         </div>
-        <h1 className="main-header form-h1">contact</h1>
       </div>
     </section>
   );

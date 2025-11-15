@@ -18,18 +18,16 @@ interface SectionProps {
 }
 
 const linkToAbout = () => (
-  <a href="#about"><FontAwesomeIcon icon={faChevronDown} /></a>
+  <a href="#about" aria-label="internal link to about section on this page"><FontAwesomeIcon icon={faChevronDown} /></a>
 )
 
 export default function Section({ artistName, artistClassName, sectionClassName, aboutDataIndex, linksDataIndex, artistDiscog }: SectionProps) {
   return (
     <section className={sectionClassName}>
-      <div className="banner">
+      <div className="banner flex-col-reverse">
+        <h1 className={`main-header ${artistClassName}-h1`}>{artistName}</h1>
+        {linkToAbout()}
         {artistDiscog === aptistReleases && <NewAptistSection />}
-        <div className="main-header center-align flex-row">
-          <h1 className={`main-header ${artistClassName}-h1`}>{artistName}</h1>
-          {linkToAbout()}
-        </div>
       </div>
       <div className="wrapper">
         <About
