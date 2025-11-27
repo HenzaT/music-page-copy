@@ -9,6 +9,7 @@ To make a site to showcase the music I am currently making. I started this with 
 - TypeScript
 - Vite
 - EmailJS
+- Netlify
 
 ## Process
 I first set up my React project using Vite: 
