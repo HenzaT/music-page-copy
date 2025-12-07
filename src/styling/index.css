@@ -20,6 +20,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;
+  background: white;
 }
 
 ::-webkit-scrollbar {
