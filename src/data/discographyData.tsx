@@ -73,7 +73,7 @@ export const aptistReleases: ReleaseData[] = [
       'Main Sequence'
     ],
     comingSoon: 'yes',
-    released: false
+    released: true
   },
   {
     title: 'Revolutions',

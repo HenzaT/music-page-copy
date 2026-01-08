@@ -23,7 +23,7 @@ const newestAptistReleaseName =
     <h2>{newestAptistRelease?.title}. <br />
       Stream it&nbsp;
       <a
-        href="https://distrokid.com/hyperfollow/aptist/revolutions"
+        href="https://distrokid.com/hyperfollow/aptist/main-sequence"
         className="distrokid-link"
         target="_blank"
         aria-label={`distrokid link to ${newestAptistRelease?.title ?? ''}`}>
