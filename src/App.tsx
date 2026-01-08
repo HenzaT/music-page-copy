@@ -46,7 +46,7 @@ export default function App() {
           background:
             location.pathname === '/contact' ? 'var(--taupe)' :
             location.pathname === '/about' ? 'linear-gradient(var(--blue), var(--dark-blue))' :
-            'var(--yellow)'
+            'var(--main-sequence-purple)'
         }}
       >
         <animated.div

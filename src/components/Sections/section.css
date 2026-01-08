@@ -11,7 +11,7 @@
 }
 
 .wrapper {
-  background: var(--yellow);
+  background: var(--main-sequence-purple);
   position: sticky;
   top: 0;
   left: 0;
@@ -41,7 +41,7 @@
 }
 
 .aptist-section {
-  background: var(--yellow);
+  background: var(--main-sequence-purple);
   color: var(--black);
 }
 
