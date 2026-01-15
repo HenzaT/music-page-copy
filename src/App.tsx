@@ -1,14 +1,17 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import type { ReleaseData } from './data/discographyData';
 import { animated, useTransition } from 'react-spring';
 import { useState } from 'react';
 
-import Navbar from './components/Navbar/Navbar';
-import Section from './components/Sections/Section';
-import ScrollToTop from './components/ScrollToTop';
-import AboutSection from './components/Sections/AboutSection/AboutSection';
-import ContactForm from './components/ContactForm/ContactForm';
 import { aptistReleases } from './data/discographyData';
+import type { ReleaseData } from './data/discographyData';
+
+import Navbar from './components/Navbar/Navbar';
+import ScrollToTop from './ScrollToTop';
+
+import AptistHomePage from './Pages/AptistHomePage/AptistHomePage';
+import AboutPage from './Pages/AboutPage/AboutPage';
+import ContactPage from './Pages/ContactPage/ContactPage';
+
 import './styling/App.css';
 
 export default function App() {
@@ -28,7 +31,7 @@ export default function App() {
     });
 
     const ArtistSection = (name: string, artistClass: string, sectionClass: string, release: ReleaseData[], aboutIndex: number, linksIndex: number) => (
-      <Section
+      <AptistHomePage
         artistName={name}
         artistClassName={artistClass}
         sectionClassName={sectionClass}
@@ -61,8 +64,8 @@ export default function App() {
           {showContent && (
           <Routes location={item}>
             <Route path="aptist" element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)} />
-            <Route path="about" element={<AboutSection />} />
-            <Route path="contact" element={<ContactForm />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="contact" element={<ContactPage />} />
             <Route path="*" element={ArtistSection('aptist', 'aptist', 'aptist-section', aptistReleases, 0, 0)} />
           </Routes>
           )}
@@ -79,7 +82,7 @@ export default function App() {
           background:
           location.pathname === '/contact' ? 'var(--taupe)' :
           location.pathname === '/about' ? 'var(--blue)' :
-          'var(--yellow)'
+          'var(--main-sequence-purple)'
         }}
       >
         <a href="#about" className="skip" aria-label="skip link">Skip to main content</a>
@@ -89,7 +92,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      {<Header />}
       {showContent && <ScrollToTop />}
       <Navbar />
       <RouteTransition />

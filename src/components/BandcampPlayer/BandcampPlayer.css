@@ -1,0 +1,9 @@
+iframe {
+  border-radius: 30px;
+  border: none;
+  background: pink;
+}
+
+iframe.info {
+  font-size: 3rem;
+}

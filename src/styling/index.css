@@ -1,12 +1,16 @@
-@import url('../components/About/About.css');
-@import url('../components/Sections/AptistInfo/AptistInfo.css');
-@import url('../components/Navbar/Navbar.css');
+/* Components */
+@import url('../components/AboutAptist/AboutAptist.css');
+@import url('../components/BandcampPlayer/BandcampPlayer.css');
 @import url('../components/Links/Links.css');
+@import url('../components/Navbar/Navbar.css');
 @import url('../components/Releases/AlbumArt.css');
 @import url('../components/Releases/Releases.css');
-@import url('../components/Sections/section.css');
-@import url('../components/ContactForm/ContactForm.css');
-@import url('../components/Sections/AboutSection/AboutSection.css');
+
+/* Pages */
+@import url('../Pages/AboutPage/AboutPage.css');
+@import url('../Pages/AptistHomePage/AptistHomePage.css');
+@import url('../Pages/ContactPage/ContactPage.css');
+
 @import url('../styling/ScrollAnimations.css');
 
 * {

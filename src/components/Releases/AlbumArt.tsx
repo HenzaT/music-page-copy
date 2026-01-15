@@ -50,8 +50,8 @@ export default function AlbumArt(props: AlbumArtProps) {
       <div className="tracklist">
         <div className="tracklist-inner">
           <ol>
-          {release.tracklist.map((song: string) => (
-            <li><p key={song} className="song-title">{song}</p></li>
+          {release.tracklist.map((song: string, id: number) => (
+            <li><p key={id} className="song-title">{song}</p></li>
           ))}
           </ol>
         </div>

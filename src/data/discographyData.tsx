@@ -2,6 +2,8 @@
 import aptistPic from '../assets/aptist/aptist-profile.jpg';
 import dreamState from '../assets/aptist/dream-state.jpg';
 import someDays from '../assets/aptist/Some-Days.jpeg';
+import invisible from '../assets/aptist/Invisible.jpeg';
+import stillMorning from '../assets/aptist/Still-Morning.jpeg';
 import mainSequence from '../assets/aptist/Main-Sequence.jpeg';
 import revolutions from '../assets/aptist/Revolutions.jpg';
 import intoSkies from '../assets/aptist/Into-Skies.jpg';
@@ -11,11 +13,10 @@ import sundown from '../assets/aptist/Sundown.jpg';
 import reflections from '../assets/aptist/Reflections.png';
 
 export interface ReleaseData {
-  title: string,
-  img: string,
-  alt: string,
-  tracklist: string[],
-  comingSoon: string, // 'yes', 'no', 'alreadyReleased'
+  title: string
+  img: string
+  alt: string
+  tracklist: string[]
   released: boolean
 }
 
@@ -41,7 +42,6 @@ export const aptistReleases: ReleaseData[] = [
       'April Tea',
       'All Mine.'
     ],
-    comingSoon: 'no',
     released: false
   },
   {
@@ -51,18 +51,26 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Some Days'
     ],
-    comingSoon: 'no',
     released: false
   },
   {
     title: 'Invisible',
-    img: './src/assets/aptist/I.jpg',
+    img: invisible,
     alt: 'Invisible Artwork',
     tracklist: [
       'Invisible',
       'Main Sequence II'
     ],
-    comingSoon: 'no',
+    released: false
+  },
+  {
+    title: 'Still Morning',
+    img: stillMorning,
+    alt: 'Still Morning Artwork',
+    tracklist: [
+      'Still Morning',
+      'Imprint'
+    ],
     released: false
   },
   {
@@ -72,7 +80,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Main Sequence'
     ],
-    comingSoon: 'yes',
     released: true
   },
   {
@@ -82,7 +89,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Revolutions'
     ],
-    comingSoon: 'yes',
     released: true
   },
   {
@@ -92,7 +98,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Into Skies'
     ],
-    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -103,7 +108,6 @@ export const aptistReleases: ReleaseData[] = [
       'Later',
       'Close Your Eyes'
     ],
-    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -113,7 +117,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'April Tea'
     ],
-    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -126,7 +129,6 @@ export const aptistReleases: ReleaseData[] = [
       'Think of June',
       'Gatehouse'
     ],
-    comingSoon: 'alreadyReleased',
     released: true
   },
   {
@@ -136,7 +138,6 @@ export const aptistReleases: ReleaseData[] = [
     tracklist: [
       'Reflections'
     ],
-    comingSoon: 'alreadyReleased',
     released: true
   }
 ]
