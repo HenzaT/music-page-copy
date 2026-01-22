@@ -25,7 +25,7 @@ export const profilePic: string = aptistPic;
 // array of objects [ {}, {}, {} ]
 export const aptistReleases: ReleaseData[] = [
   {
-    title: 'Dream State',
+    title: 'Dream State (album)',
     img: dreamState,
     alt: 'Dream State Album Artwork',
     tracklist: [
@@ -120,7 +120,7 @@ export const aptistReleases: ReleaseData[] = [
     released: true
   },
   {
-    title: 'Sundown',
+    title: 'Sundown (EP)',
     img: sundown,
     alt: 'Sundown EP Artwork',
     tracklist: [
@@ -129,6 +129,15 @@ export const aptistReleases: ReleaseData[] = [
       'Think of June',
       'Gatehouse'
     ],
+    released: true
+  },
+  {
+    title: 'Think of June',
+    img: sundown,
+    alt: 'Think of June Artwork',
+    tracklist: [
+      'Think of June'
+    ], 
     released: true
   },
   {
