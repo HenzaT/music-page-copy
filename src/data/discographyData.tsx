@@ -3,13 +3,13 @@ import aptistPic from '../assets/aptist/aptist-profile.jpg';
 import dreamState from '../assets/aptist/dream-state.jpg';
 import someDays from '../assets/aptist/Some-Days.jpeg';
 import invisible from '../assets/aptist/Invisible.jpeg';
-import stillMorning from '../assets/aptist/Still-Morning.jpeg';
 import mainSequence from '../assets/aptist/Main-Sequence.jpeg';
 import revolutions from '../assets/aptist/Revolutions.jpg';
 import intoSkies from '../assets/aptist/Into-Skies.jpg';
 import later from '../assets/aptist/Later.jpeg';
 import aprilTea from '../assets/aptist/April-Tea.jpg';
 import sundown from '../assets/aptist/Sundown.jpg';
+import thinkOfJune from '../assets/aptist/Think-of-June.jpg';
 import reflections from '../assets/aptist/Reflections.png';
 
 export interface ReleaseData {
@@ -63,16 +63,16 @@ export const aptistReleases: ReleaseData[] = [
     ],
     released: false
   },
-  {
-    title: 'Still Morning',
-    img: stillMorning,
-    alt: 'Still Morning Artwork',
-    tracklist: [
-      'Still Morning',
-      'Imprint'
-    ],
-    released: false
-  },
+  // {
+  //   title: 'Still Morning',
+  //   img: stillMorning,
+  //   alt: 'Still Morning Artwork',
+  //   tracklist: [
+  //     'Still Morning',
+  //     'Imprint'
+  //   ],
+  //   released: false
+  // },
   {
     title: 'Main Sequence',
     img: mainSequence,
@@ -133,11 +133,11 @@ export const aptistReleases: ReleaseData[] = [
   },
   {
     title: 'Think of June',
-    img: sundown,
+    img: thinkOfJune,
     alt: 'Think of June Artwork',
     tracklist: [
       'Think of June'
-    ], 
+    ],
     released: true
   },
   {
