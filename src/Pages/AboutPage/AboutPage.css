@@ -37,9 +37,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-.weblink:hover {
-  color: var(--light-yellow);
-}
+.weblink:hover { color: var(--light-yellow); }
 
 /* Medium devices (tablets) */
 @media (min-width: 768px) {
