@@ -120,7 +120,7 @@ export const aptistReleases: ReleaseData[] = [
     released: true
   },
   {
-    title: 'Sundown (EP)',
+    title: 'Sundown EP',
     img: sundown,
     alt: 'Sundown EP Artwork',
     tracklist: [
