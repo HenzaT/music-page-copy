@@ -1,6 +1,6 @@
 .contact {
-  background: var(--taupe);
-  color: var(--dark-taupe);
+  background: linear-gradient(var(--blue), var(--dark-blue));
+  color: var(--white);
 }
 
 .form-h1 {
@@ -42,7 +42,7 @@ input[type='text'], input[type='email'], textarea {
   font-size: 1rem;
   margin: 5px 0;
   padding: 5px;
-  border: 2px solid rgb(195, 157, 157);
+  border: 2px solid rgb(157, 162, 195);
   border-radius: 5px;
   outline: none;
   transition: border 0.2s ease-in-out;
@@ -55,13 +55,13 @@ textarea {
 }
 
 input[type='text']:focus, input[type='email']:focus, textarea:focus {
-  border: 2px solid var(--dark-taupe);
+  border: 2px solid var(--dark-blue);
 }
 
 input[type='submit'] {
   padding: 5px 30px;
-  background: var(--dark-taupe);
-  color: var(--taupe);
+  background: white;
+  color: var(--black);
   margin-top: 10px;
   border: none;
   border-radius: 30px;

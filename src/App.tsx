@@ -47,9 +47,9 @@ export default function App() {
           position: "relative",
           minHeight: "100dvh",
           background:
-            location.pathname === '/contact' ? 'var(--taupe)' :
+            location.pathname === '/contact' ? 'linear-gradient(var(--blue), var(--dark-blue))' :
             location.pathname === '/about' ? 'linear-gradient(var(--blue), var(--dark-blue))' :
-            'var(--main-sequence-purple)'
+            'linear-gradient(var(--blue), var(--dark-blue))'
         }}
       >
         <animated.div

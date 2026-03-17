@@ -56,6 +56,7 @@ p {
   --dark-yellow: #d48907;
   /* first swim */
   --blue: #2ea2cf;
+  --blue2: #2781a4;
   --dark-blue: #0a4962;
     /* shamisen */
   --taupe: #dfbfbf;
@@ -76,9 +77,6 @@ p {
 .first-swim-shadow { box-shadow: 0px 0px 6px var(--dark-blue); }
 
 /* shared color for specific artists */
-.aptist-color { color: var(--black); }
-.first-swim-color { color: var(--blue); }
-.about-color { color: var(--white); }
 
 /* often used css */
 .flex-col {
