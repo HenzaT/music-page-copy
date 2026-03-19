@@ -21,9 +21,9 @@ const newestAptistReleaseName = () => (
     <div className="new-release-links flex-col">
       <h2>{newestAptistRelease?.title}</h2>
       {<BandCampPlayer
-        trackId='4144575015'
-        urlTrackName='main-sequence'
-        trackName='Main Sequence'
+        trackId='4094867746'
+        urlTrackName='still-morning'
+        trackName='Still Morning'
       />}
     </div>
   </section>
